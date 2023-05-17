@@ -1,0 +1,4782 @@
+ONNX Model Information:
+Model IR Version: 7
+Producer Name: onnx.quantize
+Producer Version: 0.1.0
+Model Domain: 
+Model Description: 
+Number of Inputs: 1
+Number of Outputs: 3
+Number of Nodes: 523
+
+Input Information:
+Input 0: images (Type: tensor_type {
+  elem_type: 1
+  shape {
+    dim {
+      dim_value: 1
+    }
+    dim {
+      dim_value: 1
+    }
+    dim {
+      dim_value: 320
+    }
+    dim {
+      dim_value: 320
+    }
+  }
+}
+)
+
+Output Information:
+Output 0: output (Type: tensor_type {
+  elem_type: 1
+  shape {
+    dim {
+      dim_value: 1
+    }
+    dim {
+      dim_value: 27
+    }
+    dim {
+      dim_value: 40
+    }
+    dim {
+      dim_value: 40
+    }
+  }
+}
+)
+Output 1: 260 (Type: tensor_type {
+  elem_type: 1
+  shape {
+    dim {
+      dim_value: 1
+    }
+    dim {
+      dim_value: 27
+    }
+    dim {
+      dim_value: 20
+    }
+    dim {
+      dim_value: 20
+    }
+  }
+}
+)
+Output 2: 261 (Type: tensor_type {
+  elem_type: 1
+  shape {
+    dim {
+      dim_value: 1
+    }
+    dim {
+      dim_value: 27
+    }
+    dim {
+      dim_value: 10
+    }
+    dim {
+      dim_value: 10
+    }
+  }
+}
+)
+
+Node Information:
+Node 0: QuantizeLinear (Name: images_QuantizeLinear)
+  Inputs:
+    images
+    images_scale
+    images_zero_point
+  Outputs:
+    images_QuantizeLinear
+
+Node 1: DequantizeLinear (Name: model.0.conv.bias_DequantizeLinear)
+  Inputs:
+    model.0.conv.bias_quantized
+    model.0.conv.bias_quantized_scale
+    model.0.conv.bias_quantized_zero_point
+  Outputs:
+    model.0.conv.bias
+
+Node 2: DequantizeLinear (Name: model.0.conv.weight_DequantizeLinear)
+  Inputs:
+    model.0.conv.weight_quantized
+    model.0.conv.weight_scale
+    model.0.conv.weight_zero_point
+  Outputs:
+    model.0.conv.weight_DequantizeLinear
+
+Node 3: DequantizeLinear (Name: model.1.conv.bias_DequantizeLinear)
+  Inputs:
+    model.1.conv.bias_quantized
+    model.1.conv.bias_quantized_scale
+    model.1.conv.bias_quantized_zero_point
+  Outputs:
+    model.1.conv.bias
+
+Node 4: DequantizeLinear (Name: model.1.conv.weight_DequantizeLinear)
+  Inputs:
+    model.1.conv.weight_quantized
+    model.1.conv.weight_scale
+    model.1.conv.weight_zero_point
+  Outputs:
+    model.1.conv.weight_DequantizeLinear
+
+Node 5: DequantizeLinear (Name: model.10.conv.bias_DequantizeLinear)
+  Inputs:
+    model.10.conv.bias_quantized
+    model.10.conv.bias_quantized_scale
+    model.10.conv.bias_quantized_zero_point
+  Outputs:
+    model.10.conv.bias
+
+Node 6: DequantizeLinear (Name: model.10.conv.weight_DequantizeLinear)
+  Inputs:
+    model.10.conv.weight_quantized
+    model.10.conv.weight_scale
+    model.10.conv.weight_zero_point
+  Outputs:
+    model.10.conv.weight_DequantizeLinear
+
+Node 7: DequantizeLinear (Name: model.11.conv.bias_DequantizeLinear)
+  Inputs:
+    model.11.conv.bias_quantized
+    model.11.conv.bias_quantized_scale
+    model.11.conv.bias_quantized_zero_point
+  Outputs:
+    model.11.conv.bias
+
+Node 8: DequantizeLinear (Name: model.11.conv.weight_DequantizeLinear)
+  Inputs:
+    model.11.conv.weight_quantized
+    model.11.conv.weight_scale
+    model.11.conv.weight_zero_point
+  Outputs:
+    model.11.conv.weight_DequantizeLinear
+
+Node 9: DequantizeLinear (Name: model.12.conv.bias_DequantizeLinear)
+  Inputs:
+    model.12.conv.bias_quantized
+    model.12.conv.bias_quantized_scale
+    model.12.conv.bias_quantized_zero_point
+  Outputs:
+    model.12.conv.bias
+
+Node 10: DequantizeLinear (Name: model.12.conv.weight_DequantizeLinear)
+  Inputs:
+    model.12.conv.weight_quantized
+    model.12.conv.weight_scale
+    model.12.conv.weight_zero_point
+  Outputs:
+    model.12.conv.weight_DequantizeLinear
+
+Node 11: DequantizeLinear (Name: model.14.conv.bias_DequantizeLinear)
+  Inputs:
+    model.14.conv.bias_quantized
+    model.14.conv.bias_quantized_scale
+    model.14.conv.bias_quantized_zero_point
+  Outputs:
+    model.14.conv.bias
+
+Node 12: DequantizeLinear (Name: model.14.conv.weight_DequantizeLinear)
+  Inputs:
+    model.14.conv.weight_quantized
+    model.14.conv.weight_scale
+    model.14.conv.weight_zero_point
+  Outputs:
+    model.14.conv.weight_DequantizeLinear
+
+Node 13: DequantizeLinear (Name: model.16.conv.bias_DequantizeLinear)
+  Inputs:
+    model.16.conv.bias_quantized
+    model.16.conv.bias_quantized_scale
+    model.16.conv.bias_quantized_zero_point
+  Outputs:
+    model.16.conv.bias
+
+Node 14: DequantizeLinear (Name: model.16.conv.weight_DequantizeLinear)
+  Inputs:
+    model.16.conv.weight_quantized
+    model.16.conv.weight_scale
+    model.16.conv.weight_zero_point
+  Outputs:
+    model.16.conv.weight_DequantizeLinear
+
+Node 15: DequantizeLinear (Name: model.17.conv.bias_DequantizeLinear)
+  Inputs:
+    model.17.conv.bias_quantized
+    model.17.conv.bias_quantized_scale
+    model.17.conv.bias_quantized_zero_point
+  Outputs:
+    model.17.conv.bias
+
+Node 16: DequantizeLinear (Name: model.17.conv.weight_DequantizeLinear)
+  Inputs:
+    model.17.conv.weight_quantized
+    model.17.conv.weight_scale
+    model.17.conv.weight_zero_point
+  Outputs:
+    model.17.conv.weight_DequantizeLinear
+
+Node 17: DequantizeLinear (Name: model.18.conv.bias_DequantizeLinear)
+  Inputs:
+    model.18.conv.bias_quantized
+    model.18.conv.bias_quantized_scale
+    model.18.conv.bias_quantized_zero_point
+  Outputs:
+    model.18.conv.bias
+
+Node 18: DequantizeLinear (Name: model.18.conv.weight_DequantizeLinear)
+  Inputs:
+    model.18.conv.weight_quantized
+    model.18.conv.weight_scale
+    model.18.conv.weight_zero_point
+  Outputs:
+    model.18.conv.weight_DequantizeLinear
+
+Node 19: DequantizeLinear (Name: model.19.conv.bias_DequantizeLinear)
+  Inputs:
+    model.19.conv.bias_quantized
+    model.19.conv.bias_quantized_scale
+    model.19.conv.bias_quantized_zero_point
+  Outputs:
+    model.19.conv.bias
+
+Node 20: DequantizeLinear (Name: model.19.conv.weight_DequantizeLinear)
+  Inputs:
+    model.19.conv.weight_quantized
+    model.19.conv.weight_scale
+    model.19.conv.weight_zero_point
+  Outputs:
+    model.19.conv.weight_DequantizeLinear
+
+Node 21: DequantizeLinear (Name: model.2.conv.bias_DequantizeLinear)
+  Inputs:
+    model.2.conv.bias_quantized
+    model.2.conv.bias_quantized_scale
+    model.2.conv.bias_quantized_zero_point
+  Outputs:
+    model.2.conv.bias
+
+Node 22: DequantizeLinear (Name: model.2.conv.weight_DequantizeLinear)
+  Inputs:
+    model.2.conv.weight_quantized
+    model.2.conv.weight_scale
+    model.2.conv.weight_zero_point
+  Outputs:
+    model.2.conv.weight_DequantizeLinear
+
+Node 23: DequantizeLinear (Name: model.21.conv.bias_DequantizeLinear)
+  Inputs:
+    model.21.conv.bias_quantized
+    model.21.conv.bias_quantized_scale
+    model.21.conv.bias_quantized_zero_point
+  Outputs:
+    model.21.conv.bias
+
+Node 24: DequantizeLinear (Name: model.21.conv.weight_DequantizeLinear)
+  Inputs:
+    model.21.conv.weight_quantized
+    model.21.conv.weight_scale
+    model.21.conv.weight_zero_point
+  Outputs:
+    model.21.conv.weight_DequantizeLinear
+
+Node 25: DequantizeLinear (Name: model.23.conv.bias_DequantizeLinear)
+  Inputs:
+    model.23.conv.bias_quantized
+    model.23.conv.bias_quantized_scale
+    model.23.conv.bias_quantized_zero_point
+  Outputs:
+    model.23.conv.bias
+
+Node 26: DequantizeLinear (Name: model.23.conv.weight_DequantizeLinear)
+  Inputs:
+    model.23.conv.weight_quantized
+    model.23.conv.weight_scale
+    model.23.conv.weight_zero_point
+  Outputs:
+    model.23.conv.weight_DequantizeLinear
+
+Node 27: DequantizeLinear (Name: model.24.conv.bias_DequantizeLinear)
+  Inputs:
+    model.24.conv.bias_quantized
+    model.24.conv.bias_quantized_scale
+    model.24.conv.bias_quantized_zero_point
+  Outputs:
+    model.24.conv.bias
+
+Node 28: DequantizeLinear (Name: model.24.conv.weight_DequantizeLinear)
+  Inputs:
+    model.24.conv.weight_quantized
+    model.24.conv.weight_scale
+    model.24.conv.weight_zero_point
+  Outputs:
+    model.24.conv.weight_DequantizeLinear
+
+Node 29: DequantizeLinear (Name: model.25.conv.bias_DequantizeLinear)
+  Inputs:
+    model.25.conv.bias_quantized
+    model.25.conv.bias_quantized_scale
+    model.25.conv.bias_quantized_zero_point
+  Outputs:
+    model.25.conv.bias
+
+Node 30: DequantizeLinear (Name: model.25.conv.weight_DequantizeLinear)
+  Inputs:
+    model.25.conv.weight_quantized
+    model.25.conv.weight_scale
+    model.25.conv.weight_zero_point
+  Outputs:
+    model.25.conv.weight_DequantizeLinear
+
+Node 31: DequantizeLinear (Name: model.26.conv.bias_DequantizeLinear)
+  Inputs:
+    model.26.conv.bias_quantized
+    model.26.conv.bias_quantized_scale
+    model.26.conv.bias_quantized_zero_point
+  Outputs:
+    model.26.conv.bias
+
+Node 32: DequantizeLinear (Name: model.26.conv.weight_DequantizeLinear)
+  Inputs:
+    model.26.conv.weight_quantized
+    model.26.conv.weight_scale
+    model.26.conv.weight_zero_point
+  Outputs:
+    model.26.conv.weight_DequantizeLinear
+
+Node 33: DequantizeLinear (Name: model.28.conv.bias_DequantizeLinear)
+  Inputs:
+    model.28.conv.bias_quantized
+    model.28.conv.bias_quantized_scale
+    model.28.conv.bias_quantized_zero_point
+  Outputs:
+    model.28.conv.bias
+
+Node 34: DequantizeLinear (Name: model.28.conv.weight_DequantizeLinear)
+  Inputs:
+    model.28.conv.weight_quantized
+    model.28.conv.weight_scale
+    model.28.conv.weight_zero_point
+  Outputs:
+    model.28.conv.weight_DequantizeLinear
+
+Node 35: DequantizeLinear (Name: model.29.conv.bias_DequantizeLinear)
+  Inputs:
+    model.29.conv.bias_quantized
+    model.29.conv.bias_quantized_scale
+    model.29.conv.bias_quantized_zero_point
+  Outputs:
+    model.29.conv.bias
+
+Node 36: DequantizeLinear (Name: model.29.conv.weight_DequantizeLinear)
+  Inputs:
+    model.29.conv.weight_quantized
+    model.29.conv.weight_scale
+    model.29.conv.weight_zero_point
+  Outputs:
+    model.29.conv.weight_DequantizeLinear
+
+Node 37: DequantizeLinear (Name: model.3.conv.bias_DequantizeLinear)
+  Inputs:
+    model.3.conv.bias_quantized
+    model.3.conv.bias_quantized_scale
+    model.3.conv.bias_quantized_zero_point
+  Outputs:
+    model.3.conv.bias
+
+Node 38: DequantizeLinear (Name: model.3.conv.weight_DequantizeLinear)
+  Inputs:
+    model.3.conv.weight_quantized
+    model.3.conv.weight_scale
+    model.3.conv.weight_zero_point
+  Outputs:
+    model.3.conv.weight_DequantizeLinear
+
+Node 39: DequantizeLinear (Name: model.30.conv.bias_DequantizeLinear)
+  Inputs:
+    model.30.conv.bias_quantized
+    model.30.conv.bias_quantized_scale
+    model.30.conv.bias_quantized_zero_point
+  Outputs:
+    model.30.conv.bias
+
+Node 40: DequantizeLinear (Name: model.30.conv.weight_DequantizeLinear)
+  Inputs:
+    model.30.conv.weight_quantized
+    model.30.conv.weight_scale
+    model.30.conv.weight_zero_point
+  Outputs:
+    model.30.conv.weight_DequantizeLinear
+
+Node 41: DequantizeLinear (Name: model.35.conv.bias_DequantizeLinear)
+  Inputs:
+    model.35.conv.bias_quantized
+    model.35.conv.bias_quantized_scale
+    model.35.conv.bias_quantized_zero_point
+  Outputs:
+    model.35.conv.bias
+
+Node 42: DequantizeLinear (Name: model.35.conv.weight_DequantizeLinear)
+  Inputs:
+    model.35.conv.weight_quantized
+    model.35.conv.weight_scale
+    model.35.conv.weight_zero_point
+  Outputs:
+    model.35.conv.weight_DequantizeLinear
+
+Node 43: DequantizeLinear (Name: model.37.conv.bias_DequantizeLinear)
+  Inputs:
+    model.37.conv.bias_quantized
+    model.37.conv.bias_quantized_scale
+    model.37.conv.bias_quantized_zero_point
+  Outputs:
+    model.37.conv.bias
+
+Node 44: DequantizeLinear (Name: model.37.conv.weight_DequantizeLinear)
+  Inputs:
+    model.37.conv.weight_quantized
+    model.37.conv.weight_scale
+    model.37.conv.weight_zero_point
+  Outputs:
+    model.37.conv.weight_DequantizeLinear
+
+Node 45: DequantizeLinear (Name: model.38.conv.bias_DequantizeLinear)
+  Inputs:
+    model.38.conv.bias_quantized
+    model.38.conv.bias_quantized_scale
+    model.38.conv.bias_quantized_zero_point
+  Outputs:
+    model.38.conv.bias
+
+Node 46: DequantizeLinear (Name: model.38.conv.weight_DequantizeLinear)
+  Inputs:
+    model.38.conv.weight_quantized
+    model.38.conv.weight_scale
+    model.38.conv.weight_zero_point
+  Outputs:
+    model.38.conv.weight_DequantizeLinear
+
+Node 47: DequantizeLinear (Name: model.4.conv.bias_DequantizeLinear)
+  Inputs:
+    model.4.conv.bias_quantized
+    model.4.conv.bias_quantized_scale
+    model.4.conv.bias_quantized_zero_point
+  Outputs:
+    model.4.conv.bias
+
+Node 48: DequantizeLinear (Name: model.4.conv.weight_DequantizeLinear)
+  Inputs:
+    model.4.conv.weight_quantized
+    model.4.conv.weight_scale
+    model.4.conv.weight_zero_point
+  Outputs:
+    model.4.conv.weight_DequantizeLinear
+
+Node 49: DequantizeLinear (Name: model.40.conv.bias_DequantizeLinear)
+  Inputs:
+    model.40.conv.bias_quantized
+    model.40.conv.bias_quantized_scale
+    model.40.conv.bias_quantized_zero_point
+  Outputs:
+    model.40.conv.bias
+
+Node 50: DequantizeLinear (Name: model.40.conv.weight_DequantizeLinear)
+  Inputs:
+    model.40.conv.weight_quantized
+    model.40.conv.weight_scale
+    model.40.conv.weight_zero_point
+  Outputs:
+    model.40.conv.weight_DequantizeLinear
+
+Node 51: DequantizeLinear (Name: model.42.conv.bias_DequantizeLinear)
+  Inputs:
+    model.42.conv.bias_quantized
+    model.42.conv.bias_quantized_scale
+    model.42.conv.bias_quantized_zero_point
+  Outputs:
+    model.42.conv.bias
+
+Node 52: DequantizeLinear (Name: model.42.conv.weight_DequantizeLinear)
+  Inputs:
+    model.42.conv.weight_quantized
+    model.42.conv.weight_scale
+    model.42.conv.weight_zero_point
+  Outputs:
+    model.42.conv.weight_DequantizeLinear
+
+Node 53: DequantizeLinear (Name: model.43.conv.bias_DequantizeLinear)
+  Inputs:
+    model.43.conv.bias_quantized
+    model.43.conv.bias_quantized_scale
+    model.43.conv.bias_quantized_zero_point
+  Outputs:
+    model.43.conv.bias
+
+Node 54: DequantizeLinear (Name: model.43.conv.weight_DequantizeLinear)
+  Inputs:
+    model.43.conv.weight_quantized
+    model.43.conv.weight_scale
+    model.43.conv.weight_zero_point
+  Outputs:
+    model.43.conv.weight_DequantizeLinear
+
+Node 55: DequantizeLinear (Name: model.44.conv.bias_DequantizeLinear)
+  Inputs:
+    model.44.conv.bias_quantized
+    model.44.conv.bias_quantized_scale
+    model.44.conv.bias_quantized_zero_point
+  Outputs:
+    model.44.conv.bias
+
+Node 56: DequantizeLinear (Name: model.44.conv.weight_DequantizeLinear)
+  Inputs:
+    model.44.conv.weight_quantized
+    model.44.conv.weight_scale
+    model.44.conv.weight_zero_point
+  Outputs:
+    model.44.conv.weight_DequantizeLinear
+
+Node 57: DequantizeLinear (Name: model.45.conv.bias_DequantizeLinear)
+  Inputs:
+    model.45.conv.bias_quantized
+    model.45.conv.bias_quantized_scale
+    model.45.conv.bias_quantized_zero_point
+  Outputs:
+    model.45.conv.bias
+
+Node 58: DequantizeLinear (Name: model.45.conv.weight_DequantizeLinear)
+  Inputs:
+    model.45.conv.weight_quantized
+    model.45.conv.weight_scale
+    model.45.conv.weight_zero_point
+  Outputs:
+    model.45.conv.weight_DequantizeLinear
+
+Node 59: DequantizeLinear (Name: model.47.conv.bias_DequantizeLinear)
+  Inputs:
+    model.47.conv.bias_quantized
+    model.47.conv.bias_quantized_scale
+    model.47.conv.bias_quantized_zero_point
+  Outputs:
+    model.47.conv.bias
+
+Node 60: DequantizeLinear (Name: model.47.conv.weight_DequantizeLinear)
+  Inputs:
+    model.47.conv.weight_quantized
+    model.47.conv.weight_scale
+    model.47.conv.weight_zero_point
+  Outputs:
+    model.47.conv.weight_DequantizeLinear
+
+Node 61: DequantizeLinear (Name: model.48.conv.bias_DequantizeLinear)
+  Inputs:
+    model.48.conv.bias_quantized
+    model.48.conv.bias_quantized_scale
+    model.48.conv.bias_quantized_zero_point
+  Outputs:
+    model.48.conv.bias
+
+Node 62: DequantizeLinear (Name: model.48.conv.weight_DequantizeLinear)
+  Inputs:
+    model.48.conv.weight_quantized
+    model.48.conv.weight_scale
+    model.48.conv.weight_zero_point
+  Outputs:
+    model.48.conv.weight_DequantizeLinear
+
+Node 63: DequantizeLinear (Name: model.5.conv.bias_DequantizeLinear)
+  Inputs:
+    model.5.conv.bias_quantized
+    model.5.conv.bias_quantized_scale
+    model.5.conv.bias_quantized_zero_point
+  Outputs:
+    model.5.conv.bias
+
+Node 64: DequantizeLinear (Name: model.5.conv.weight_DequantizeLinear)
+  Inputs:
+    model.5.conv.weight_quantized
+    model.5.conv.weight_scale
+    model.5.conv.weight_zero_point
+  Outputs:
+    model.5.conv.weight_DequantizeLinear
+
+Node 65: DequantizeLinear (Name: model.50.conv.bias_DequantizeLinear)
+  Inputs:
+    model.50.conv.bias_quantized
+    model.50.conv.bias_quantized_scale
+    model.50.conv.bias_quantized_zero_point
+  Outputs:
+    model.50.conv.bias
+
+Node 66: DequantizeLinear (Name: model.50.conv.weight_DequantizeLinear)
+  Inputs:
+    model.50.conv.weight_quantized
+    model.50.conv.weight_scale
+    model.50.conv.weight_zero_point
+  Outputs:
+    model.50.conv.weight_DequantizeLinear
+
+Node 67: DequantizeLinear (Name: model.52.conv.bias_DequantizeLinear)
+  Inputs:
+    model.52.conv.bias_quantized
+    model.52.conv.bias_quantized_scale
+    model.52.conv.bias_quantized_zero_point
+  Outputs:
+    model.52.conv.bias
+
+Node 68: DequantizeLinear (Name: model.52.conv.weight_DequantizeLinear)
+  Inputs:
+    model.52.conv.weight_quantized
+    model.52.conv.weight_scale
+    model.52.conv.weight_zero_point
+  Outputs:
+    model.52.conv.weight_DequantizeLinear
+
+Node 69: DequantizeLinear (Name: model.53.conv.bias_DequantizeLinear)
+  Inputs:
+    model.53.conv.bias_quantized
+    model.53.conv.bias_quantized_scale
+    model.53.conv.bias_quantized_zero_point
+  Outputs:
+    model.53.conv.bias
+
+Node 70: DequantizeLinear (Name: model.53.conv.weight_DequantizeLinear)
+  Inputs:
+    model.53.conv.weight_quantized
+    model.53.conv.weight_scale
+    model.53.conv.weight_zero_point
+  Outputs:
+    model.53.conv.weight_DequantizeLinear
+
+Node 71: DequantizeLinear (Name: model.54.conv.bias_DequantizeLinear)
+  Inputs:
+    model.54.conv.bias_quantized
+    model.54.conv.bias_quantized_scale
+    model.54.conv.bias_quantized_zero_point
+  Outputs:
+    model.54.conv.bias
+
+Node 72: DequantizeLinear (Name: model.54.conv.weight_DequantizeLinear)
+  Inputs:
+    model.54.conv.weight_quantized
+    model.54.conv.weight_scale
+    model.54.conv.weight_zero_point
+  Outputs:
+    model.54.conv.weight_DequantizeLinear
+
+Node 73: DequantizeLinear (Name: model.55.conv.bias_DequantizeLinear)
+  Inputs:
+    model.55.conv.bias_quantized
+    model.55.conv.bias_quantized_scale
+    model.55.conv.bias_quantized_zero_point
+  Outputs:
+    model.55.conv.bias
+
+Node 74: DequantizeLinear (Name: model.55.conv.weight_DequantizeLinear)
+  Inputs:
+    model.55.conv.weight_quantized
+    model.55.conv.weight_scale
+    model.55.conv.weight_zero_point
+  Outputs:
+    model.55.conv.weight_DequantizeLinear
+
+Node 75: DequantizeLinear (Name: model.57.conv.bias_DequantizeLinear)
+  Inputs:
+    model.57.conv.bias_quantized
+    model.57.conv.bias_quantized_scale
+    model.57.conv.bias_quantized_zero_point
+  Outputs:
+    model.57.conv.bias
+
+Node 76: DequantizeLinear (Name: model.57.conv.weight_DequantizeLinear)
+  Inputs:
+    model.57.conv.weight_quantized
+    model.57.conv.weight_scale
+    model.57.conv.weight_zero_point
+  Outputs:
+    model.57.conv.weight_DequantizeLinear
+
+Node 77: DequantizeLinear (Name: model.58.conv.bias_DequantizeLinear)
+  Inputs:
+    model.58.conv.bias_quantized
+    model.58.conv.bias_quantized_scale
+    model.58.conv.bias_quantized_zero_point
+  Outputs:
+    model.58.conv.bias
+
+Node 78: DequantizeLinear (Name: model.58.conv.weight_DequantizeLinear)
+  Inputs:
+    model.58.conv.weight_quantized
+    model.58.conv.weight_scale
+    model.58.conv.weight_zero_point
+  Outputs:
+    model.58.conv.weight_DequantizeLinear
+
+Node 79: DequantizeLinear (Name: model.60.conv.bias_DequantizeLinear)
+  Inputs:
+    model.60.conv.bias_quantized
+    model.60.conv.bias_quantized_scale
+    model.60.conv.bias_quantized_zero_point
+  Outputs:
+    model.60.conv.bias
+
+Node 80: DequantizeLinear (Name: model.60.conv.weight_DequantizeLinear)
+  Inputs:
+    model.60.conv.weight_quantized
+    model.60.conv.weight_scale
+    model.60.conv.weight_zero_point
+  Outputs:
+    model.60.conv.weight_DequantizeLinear
+
+Node 81: DequantizeLinear (Name: model.61.conv.bias_DequantizeLinear)
+  Inputs:
+    model.61.conv.bias_quantized
+    model.61.conv.bias_quantized_scale
+    model.61.conv.bias_quantized_zero_point
+  Outputs:
+    model.61.conv.bias
+
+Node 82: DequantizeLinear (Name: model.61.conv.weight_DequantizeLinear)
+  Inputs:
+    model.61.conv.weight_quantized
+    model.61.conv.weight_scale
+    model.61.conv.weight_zero_point
+  Outputs:
+    model.61.conv.weight_DequantizeLinear
+
+Node 83: DequantizeLinear (Name: model.62.conv.bias_DequantizeLinear)
+  Inputs:
+    model.62.conv.bias_quantized
+    model.62.conv.bias_quantized_scale
+    model.62.conv.bias_quantized_zero_point
+  Outputs:
+    model.62.conv.bias
+
+Node 84: DequantizeLinear (Name: model.62.conv.weight_DequantizeLinear)
+  Inputs:
+    model.62.conv.weight_quantized
+    model.62.conv.weight_scale
+    model.62.conv.weight_zero_point
+  Outputs:
+    model.62.conv.weight_DequantizeLinear
+
+Node 85: DequantizeLinear (Name: model.63.conv.bias_DequantizeLinear)
+  Inputs:
+    model.63.conv.bias_quantized
+    model.63.conv.bias_quantized_scale
+    model.63.conv.bias_quantized_zero_point
+  Outputs:
+    model.63.conv.bias
+
+Node 86: DequantizeLinear (Name: model.63.conv.weight_DequantizeLinear)
+  Inputs:
+    model.63.conv.weight_quantized
+    model.63.conv.weight_scale
+    model.63.conv.weight_zero_point
+  Outputs:
+    model.63.conv.weight_DequantizeLinear
+
+Node 87: DequantizeLinear (Name: model.65.conv.bias_DequantizeLinear)
+  Inputs:
+    model.65.conv.bias_quantized
+    model.65.conv.bias_quantized_scale
+    model.65.conv.bias_quantized_zero_point
+  Outputs:
+    model.65.conv.bias
+
+Node 88: DequantizeLinear (Name: model.65.conv.weight_DequantizeLinear)
+  Inputs:
+    model.65.conv.weight_quantized
+    model.65.conv.weight_scale
+    model.65.conv.weight_zero_point
+  Outputs:
+    model.65.conv.weight_DequantizeLinear
+
+Node 89: DequantizeLinear (Name: model.66.conv.bias_DequantizeLinear)
+  Inputs:
+    model.66.conv.bias_quantized
+    model.66.conv.bias_quantized_scale
+    model.66.conv.bias_quantized_zero_point
+  Outputs:
+    model.66.conv.bias
+
+Node 90: DequantizeLinear (Name: model.66.conv.weight_DequantizeLinear)
+  Inputs:
+    model.66.conv.weight_quantized
+    model.66.conv.weight_scale
+    model.66.conv.weight_zero_point
+  Outputs:
+    model.66.conv.weight_DequantizeLinear
+
+Node 91: DequantizeLinear (Name: model.68.conv.bias_DequantizeLinear)
+  Inputs:
+    model.68.conv.bias_quantized
+    model.68.conv.bias_quantized_scale
+    model.68.conv.bias_quantized_zero_point
+  Outputs:
+    model.68.conv.bias
+
+Node 92: DequantizeLinear (Name: model.68.conv.weight_DequantizeLinear)
+  Inputs:
+    model.68.conv.weight_quantized
+    model.68.conv.weight_scale
+    model.68.conv.weight_zero_point
+  Outputs:
+    model.68.conv.weight_DequantizeLinear
+
+Node 93: DequantizeLinear (Name: model.69.conv.bias_DequantizeLinear)
+  Inputs:
+    model.69.conv.bias_quantized
+    model.69.conv.bias_quantized_scale
+    model.69.conv.bias_quantized_zero_point
+  Outputs:
+    model.69.conv.bias
+
+Node 94: DequantizeLinear (Name: model.69.conv.weight_DequantizeLinear)
+  Inputs:
+    model.69.conv.weight_quantized
+    model.69.conv.weight_scale
+    model.69.conv.weight_zero_point
+  Outputs:
+    model.69.conv.weight_DequantizeLinear
+
+Node 95: DequantizeLinear (Name: model.7.conv.bias_DequantizeLinear)
+  Inputs:
+    model.7.conv.bias_quantized
+    model.7.conv.bias_quantized_scale
+    model.7.conv.bias_quantized_zero_point
+  Outputs:
+    model.7.conv.bias
+
+Node 96: DequantizeLinear (Name: model.7.conv.weight_DequantizeLinear)
+  Inputs:
+    model.7.conv.weight_quantized
+    model.7.conv.weight_scale
+    model.7.conv.weight_zero_point
+  Outputs:
+    model.7.conv.weight_DequantizeLinear
+
+Node 97: DequantizeLinear (Name: model.70.conv.bias_DequantizeLinear)
+  Inputs:
+    model.70.conv.bias_quantized
+    model.70.conv.bias_quantized_scale
+    model.70.conv.bias_quantized_zero_point
+  Outputs:
+    model.70.conv.bias
+
+Node 98: DequantizeLinear (Name: model.70.conv.weight_DequantizeLinear)
+  Inputs:
+    model.70.conv.weight_quantized
+    model.70.conv.weight_scale
+    model.70.conv.weight_zero_point
+  Outputs:
+    model.70.conv.weight_DequantizeLinear
+
+Node 99: DequantizeLinear (Name: model.71.conv.bias_DequantizeLinear)
+  Inputs:
+    model.71.conv.bias_quantized
+    model.71.conv.bias_quantized_scale
+    model.71.conv.bias_quantized_zero_point
+  Outputs:
+    model.71.conv.bias
+
+Node 100: DequantizeLinear (Name: model.71.conv.weight_DequantizeLinear)
+  Inputs:
+    model.71.conv.weight_quantized
+    model.71.conv.weight_scale
+    model.71.conv.weight_zero_point
+  Outputs:
+    model.71.conv.weight_DequantizeLinear
+
+Node 101: DequantizeLinear (Name: model.73.conv.bias_DequantizeLinear)
+  Inputs:
+    model.73.conv.bias_quantized
+    model.73.conv.bias_quantized_scale
+    model.73.conv.bias_quantized_zero_point
+  Outputs:
+    model.73.conv.bias
+
+Node 102: DequantizeLinear (Name: model.73.conv.weight_DequantizeLinear)
+  Inputs:
+    model.73.conv.weight_quantized
+    model.73.conv.weight_scale
+    model.73.conv.weight_zero_point
+  Outputs:
+    model.73.conv.weight_DequantizeLinear
+
+Node 103: DequantizeLinear (Name: model.74.conv.bias_DequantizeLinear)
+  Inputs:
+    model.74.conv.bias_quantized
+    model.74.conv.bias_quantized_scale
+    model.74.conv.bias_quantized_zero_point
+  Outputs:
+    model.74.conv.bias
+
+Node 104: DequantizeLinear (Name: model.74.conv.weight_DequantizeLinear)
+  Inputs:
+    model.74.conv.weight_quantized
+    model.74.conv.weight_scale
+    model.74.conv.weight_zero_point
+  Outputs:
+    model.74.conv.weight_DequantizeLinear
+
+Node 105: DequantizeLinear (Name: model.75.conv.bias_DequantizeLinear)
+  Inputs:
+    model.75.conv.bias_quantized
+    model.75.conv.bias_quantized_scale
+    model.75.conv.bias_quantized_zero_point
+  Outputs:
+    model.75.conv.bias
+
+Node 106: DequantizeLinear (Name: model.75.conv.weight_DequantizeLinear)
+  Inputs:
+    model.75.conv.weight_quantized
+    model.75.conv.weight_scale
+    model.75.conv.weight_zero_point
+  Outputs:
+    model.75.conv.weight_DequantizeLinear
+
+Node 107: DequantizeLinear (Name: model.76.conv.bias_DequantizeLinear)
+  Inputs:
+    model.76.conv.bias_quantized
+    model.76.conv.bias_quantized_scale
+    model.76.conv.bias_quantized_zero_point
+  Outputs:
+    model.76.conv.bias
+
+Node 108: DequantizeLinear (Name: model.76.conv.weight_DequantizeLinear)
+  Inputs:
+    model.76.conv.weight_quantized
+    model.76.conv.weight_scale
+    model.76.conv.weight_zero_point
+  Outputs:
+    model.76.conv.weight_DequantizeLinear
+
+Node 109: DequantizeLinear (Name: model.77.m.0.bias_DequantizeLinear)
+  Inputs:
+    model.77.m.0.bias_quantized
+    model.77.m.0.bias_quantized_scale
+    model.77.m.0.bias_quantized_zero_point
+  Outputs:
+    model.77.m.0.bias
+
+Node 110: DequantizeLinear (Name: model.77.m.0.weight_DequantizeLinear)
+  Inputs:
+    model.77.m.0.weight_quantized
+    model.77.m.0.weight_scale
+    model.77.m.0.weight_zero_point
+  Outputs:
+    model.77.m.0.weight_DequantizeLinear
+
+Node 111: DequantizeLinear (Name: model.77.m.1.bias_DequantizeLinear)
+  Inputs:
+    model.77.m.1.bias_quantized
+    model.77.m.1.bias_quantized_scale
+    model.77.m.1.bias_quantized_zero_point
+  Outputs:
+    model.77.m.1.bias
+
+Node 112: DequantizeLinear (Name: model.77.m.1.weight_DequantizeLinear)
+  Inputs:
+    model.77.m.1.weight_quantized
+    model.77.m.1.weight_scale
+    model.77.m.1.weight_zero_point
+  Outputs:
+    model.77.m.1.weight_DequantizeLinear
+
+Node 113: DequantizeLinear (Name: model.77.m.2.bias_DequantizeLinear)
+  Inputs:
+    model.77.m.2.bias_quantized
+    model.77.m.2.bias_quantized_scale
+    model.77.m.2.bias_quantized_zero_point
+  Outputs:
+    model.77.m.2.bias
+
+Node 114: DequantizeLinear (Name: model.77.m.2.weight_DequantizeLinear)
+  Inputs:
+    model.77.m.2.weight_quantized
+    model.77.m.2.weight_scale
+    model.77.m.2.weight_zero_point
+  Outputs:
+    model.77.m.2.weight_DequantizeLinear
+
+Node 115: DequantizeLinear (Name: model.9.conv.bias_DequantizeLinear)
+  Inputs:
+    model.9.conv.bias_quantized
+    model.9.conv.bias_quantized_scale
+    model.9.conv.bias_quantized_zero_point
+  Outputs:
+    model.9.conv.bias
+
+Node 116: DequantizeLinear (Name: model.9.conv.weight_DequantizeLinear)
+  Inputs:
+    model.9.conv.weight_quantized
+    model.9.conv.weight_scale
+    model.9.conv.weight_zero_point
+  Outputs:
+    model.9.conv.weight_DequantizeLinear
+
+Node 117: DequantizeLinear (Name: images_DequantizeLinear)
+  Inputs:
+    images_QuantizeLinear
+    images_scale
+    images_zero_point
+  Outputs:
+    images_DequantizeLinear
+
+Node 118: Conv (Name: Conv_0)
+  Inputs:
+    images_DequantizeLinear
+    model.0.conv.weight_DequantizeLinear
+    model.0.conv.bias
+  Outputs:
+    119
+
+Node 119: QuantizeLinear (Name: 119_QuantizeLinear)
+  Inputs:
+    119
+    119_scale
+    119_zero_point
+  Outputs:
+    119_QuantizeLinear
+
+Node 120: DequantizeLinear (Name: 119_DequantizeLinear)
+  Inputs:
+    119_QuantizeLinear
+    119_scale
+    119_zero_point
+  Outputs:
+    119_DequantizeLinear
+
+Node 121: LeakyRelu (Name: LeakyRelu_1)
+  Inputs:
+    119_DequantizeLinear
+  Outputs:
+    120
+
+Node 122: QuantizeLinear (Name: 120_QuantizeLinear)
+  Inputs:
+    120
+    120_scale
+    120_zero_point
+  Outputs:
+    120_QuantizeLinear
+
+Node 123: DequantizeLinear (Name: 120_DequantizeLinear)
+  Inputs:
+    120_QuantizeLinear
+    120_scale
+    120_zero_point
+  Outputs:
+    120_DequantizeLinear
+
+Node 124: Conv (Name: Conv_2)
+  Inputs:
+    120_DequantizeLinear
+    model.1.conv.weight_DequantizeLinear
+    model.1.conv.bias
+  Outputs:
+    121
+
+Node 125: QuantizeLinear (Name: 121_QuantizeLinear)
+  Inputs:
+    121
+    121_scale
+    121_zero_point
+  Outputs:
+    121_QuantizeLinear
+
+Node 126: DequantizeLinear (Name: 121_DequantizeLinear)
+  Inputs:
+    121_QuantizeLinear
+    121_scale
+    121_zero_point
+  Outputs:
+    121_DequantizeLinear
+
+Node 127: LeakyRelu (Name: LeakyRelu_3)
+  Inputs:
+    121_DequantizeLinear
+  Outputs:
+    122
+
+Node 128: QuantizeLinear (Name: 122_QuantizeLinear)
+  Inputs:
+    122
+    122_scale
+    122_zero_point
+  Outputs:
+    122_QuantizeLinear
+
+Node 129: DequantizeLinear (Name: 122_DequantizeLinear)
+  Inputs:
+    122_QuantizeLinear
+    122_scale
+    122_zero_point
+  Outputs:
+    122_DequantizeLinear
+
+Node 130: Conv (Name: Conv_4)
+  Inputs:
+    122_DequantizeLinear
+    model.2.conv.weight_DequantizeLinear
+    model.2.conv.bias
+  Outputs:
+    123
+
+Node 131: Conv (Name: Conv_6)
+  Inputs:
+    122_DequantizeLinear
+    model.3.conv.weight_DequantizeLinear
+    model.3.conv.bias
+  Outputs:
+    125
+
+Node 132: QuantizeLinear (Name: 123_QuantizeLinear)
+  Inputs:
+    123
+    123_scale
+    123_zero_point
+  Outputs:
+    123_QuantizeLinear
+
+Node 133: QuantizeLinear (Name: 125_QuantizeLinear)
+  Inputs:
+    125
+    125_scale
+    125_zero_point
+  Outputs:
+    125_QuantizeLinear
+
+Node 134: DequantizeLinear (Name: 123_DequantizeLinear)
+  Inputs:
+    123_QuantizeLinear
+    123_scale
+    123_zero_point
+  Outputs:
+    123_DequantizeLinear
+
+Node 135: DequantizeLinear (Name: 125_DequantizeLinear)
+  Inputs:
+    125_QuantizeLinear
+    125_scale
+    125_zero_point
+  Outputs:
+    125_DequantizeLinear
+
+Node 136: LeakyRelu (Name: LeakyRelu_5)
+  Inputs:
+    123_DequantizeLinear
+  Outputs:
+    124
+
+Node 137: LeakyRelu (Name: LeakyRelu_7)
+  Inputs:
+    125_DequantizeLinear
+  Outputs:
+    126
+
+Node 138: QuantizeLinear (Name: 124_QuantizeLinear)
+  Inputs:
+    124
+    124_scale
+    124_zero_point
+  Outputs:
+    124_QuantizeLinear
+
+Node 139: QuantizeLinear (Name: 126_QuantizeLinear)
+  Inputs:
+    126
+    126_scale
+    126_zero_point
+  Outputs:
+    126_QuantizeLinear
+
+Node 140: DequantizeLinear (Name: 124_DequantizeLinear)
+  Inputs:
+    124_QuantizeLinear
+    124_scale
+    124_zero_point
+  Outputs:
+    124_DequantizeLinear
+
+Node 141: DequantizeLinear (Name: 126_DequantizeLinear)
+  Inputs:
+    126_QuantizeLinear
+    126_scale
+    126_zero_point
+  Outputs:
+    126_DequantizeLinear
+
+Node 142: Conv (Name: Conv_8)
+  Inputs:
+    126_DequantizeLinear
+    model.4.conv.weight_DequantizeLinear
+    model.4.conv.bias
+  Outputs:
+    127
+
+Node 143: QuantizeLinear (Name: 127_QuantizeLinear)
+  Inputs:
+    127
+    127_scale
+    127_zero_point
+  Outputs:
+    127_QuantizeLinear
+
+Node 144: DequantizeLinear (Name: 127_DequantizeLinear)
+  Inputs:
+    127_QuantizeLinear
+    127_scale
+    127_zero_point
+  Outputs:
+    127_DequantizeLinear
+
+Node 145: LeakyRelu (Name: LeakyRelu_9)
+  Inputs:
+    127_DequantizeLinear
+  Outputs:
+    128
+
+Node 146: QuantizeLinear (Name: 128_QuantizeLinear)
+  Inputs:
+    128
+    128_scale
+    128_zero_point
+  Outputs:
+    128_QuantizeLinear
+
+Node 147: DequantizeLinear (Name: 128_DequantizeLinear)
+  Inputs:
+    128_QuantizeLinear
+    128_scale
+    128_zero_point
+  Outputs:
+    128_DequantizeLinear
+
+Node 148: Conv (Name: Conv_10)
+  Inputs:
+    128_DequantizeLinear
+    model.5.conv.weight_DequantizeLinear
+    model.5.conv.bias
+  Outputs:
+    129
+
+Node 149: QuantizeLinear (Name: 129_QuantizeLinear)
+  Inputs:
+    129
+    129_scale
+    129_zero_point
+  Outputs:
+    129_QuantizeLinear
+
+Node 150: DequantizeLinear (Name: 129_DequantizeLinear)
+  Inputs:
+    129_QuantizeLinear
+    129_scale
+    129_zero_point
+  Outputs:
+    129_DequantizeLinear
+
+Node 151: LeakyRelu (Name: LeakyRelu_11)
+  Inputs:
+    129_DequantizeLinear
+  Outputs:
+    130
+
+Node 152: QuantizeLinear (Name: 130_QuantizeLinear)
+  Inputs:
+    130
+    130_scale
+    130_zero_point
+  Outputs:
+    130_QuantizeLinear
+
+Node 153: DequantizeLinear (Name: 130_DequantizeLinear)
+  Inputs:
+    130_QuantizeLinear
+    130_scale
+    130_zero_point
+  Outputs:
+    130_DequantizeLinear
+
+Node 154: Concat (Name: Concat_12)
+  Inputs:
+    130_DequantizeLinear
+    128_DequantizeLinear
+    126_DequantizeLinear
+    124_DequantizeLinear
+  Outputs:
+    131
+
+Node 155: QuantizeLinear (Name: 131_QuantizeLinear)
+  Inputs:
+    131
+    131_scale
+    131_zero_point
+  Outputs:
+    131_QuantizeLinear
+
+Node 156: DequantizeLinear (Name: 131_DequantizeLinear)
+  Inputs:
+    131_QuantizeLinear
+    131_scale
+    131_zero_point
+  Outputs:
+    131_DequantizeLinear
+
+Node 157: Conv (Name: Conv_13)
+  Inputs:
+    131_DequantizeLinear
+    model.7.conv.weight_DequantizeLinear
+    model.7.conv.bias
+  Outputs:
+    132
+
+Node 158: QuantizeLinear (Name: 132_QuantizeLinear)
+  Inputs:
+    132
+    132_scale
+    132_zero_point
+  Outputs:
+    132_QuantizeLinear
+
+Node 159: DequantizeLinear (Name: 132_DequantizeLinear)
+  Inputs:
+    132_QuantizeLinear
+    132_scale
+    132_zero_point
+  Outputs:
+    132_DequantizeLinear
+
+Node 160: LeakyRelu (Name: LeakyRelu_14)
+  Inputs:
+    132_DequantizeLinear
+  Outputs:
+    133
+
+Node 161: QuantizeLinear (Name: 133_QuantizeLinear)
+  Inputs:
+    133
+    133_scale
+    133_zero_point
+  Outputs:
+    133_QuantizeLinear
+
+Node 162: DequantizeLinear (Name: 133_DequantizeLinear)
+  Inputs:
+    133_QuantizeLinear
+    133_scale
+    133_zero_point
+  Outputs:
+    133_DequantizeLinear
+
+Node 163: MaxPool (Name: MaxPool_15)
+  Inputs:
+    133_DequantizeLinear
+  Outputs:
+    134
+
+Node 164: QuantizeLinear (Name: 134_QuantizeLinear)
+  Inputs:
+    134
+    134_scale
+    134_zero_point
+  Outputs:
+    134_QuantizeLinear
+
+Node 165: DequantizeLinear (Name: 134_DequantizeLinear)
+  Inputs:
+    134_QuantizeLinear
+    134_scale
+    134_zero_point
+  Outputs:
+    134_DequantizeLinear
+
+Node 166: Conv (Name: Conv_16)
+  Inputs:
+    134_DequantizeLinear
+    model.9.conv.weight_DequantizeLinear
+    model.9.conv.bias
+  Outputs:
+    135
+
+Node 167: Conv (Name: Conv_18)
+  Inputs:
+    134_DequantizeLinear
+    model.10.conv.weight_DequantizeLinear
+    model.10.conv.bias
+  Outputs:
+    137
+
+Node 168: QuantizeLinear (Name: 135_QuantizeLinear)
+  Inputs:
+    135
+    135_scale
+    135_zero_point
+  Outputs:
+    135_QuantizeLinear
+
+Node 169: QuantizeLinear (Name: 137_QuantizeLinear)
+  Inputs:
+    137
+    137_scale
+    137_zero_point
+  Outputs:
+    137_QuantizeLinear
+
+Node 170: DequantizeLinear (Name: 135_DequantizeLinear)
+  Inputs:
+    135_QuantizeLinear
+    135_scale
+    135_zero_point
+  Outputs:
+    135_DequantizeLinear
+
+Node 171: DequantizeLinear (Name: 137_DequantizeLinear)
+  Inputs:
+    137_QuantizeLinear
+    137_scale
+    137_zero_point
+  Outputs:
+    137_DequantizeLinear
+
+Node 172: LeakyRelu (Name: LeakyRelu_17)
+  Inputs:
+    135_DequantizeLinear
+  Outputs:
+    136
+
+Node 173: LeakyRelu (Name: LeakyRelu_19)
+  Inputs:
+    137_DequantizeLinear
+  Outputs:
+    138
+
+Node 174: QuantizeLinear (Name: 136_QuantizeLinear)
+  Inputs:
+    136
+    136_scale
+    136_zero_point
+  Outputs:
+    136_QuantizeLinear
+
+Node 175: QuantizeLinear (Name: 138_QuantizeLinear)
+  Inputs:
+    138
+    138_scale
+    138_zero_point
+  Outputs:
+    138_QuantizeLinear
+
+Node 176: DequantizeLinear (Name: 136_DequantizeLinear)
+  Inputs:
+    136_QuantizeLinear
+    136_scale
+    136_zero_point
+  Outputs:
+    136_DequantizeLinear
+
+Node 177: DequantizeLinear (Name: 138_DequantizeLinear)
+  Inputs:
+    138_QuantizeLinear
+    138_scale
+    138_zero_point
+  Outputs:
+    138_DequantizeLinear
+
+Node 178: Conv (Name: Conv_20)
+  Inputs:
+    138_DequantizeLinear
+    model.11.conv.weight_DequantizeLinear
+    model.11.conv.bias
+  Outputs:
+    139
+
+Node 179: QuantizeLinear (Name: 139_QuantizeLinear)
+  Inputs:
+    139
+    139_scale
+    139_zero_point
+  Outputs:
+    139_QuantizeLinear
+
+Node 180: DequantizeLinear (Name: 139_DequantizeLinear)
+  Inputs:
+    139_QuantizeLinear
+    139_scale
+    139_zero_point
+  Outputs:
+    139_DequantizeLinear
+
+Node 181: LeakyRelu (Name: LeakyRelu_21)
+  Inputs:
+    139_DequantizeLinear
+  Outputs:
+    140
+
+Node 182: QuantizeLinear (Name: 140_QuantizeLinear)
+  Inputs:
+    140
+    140_scale
+    140_zero_point
+  Outputs:
+    140_QuantizeLinear
+
+Node 183: DequantizeLinear (Name: 140_DequantizeLinear)
+  Inputs:
+    140_QuantizeLinear
+    140_scale
+    140_zero_point
+  Outputs:
+    140_DequantizeLinear
+
+Node 184: Conv (Name: Conv_22)
+  Inputs:
+    140_DequantizeLinear
+    model.12.conv.weight_DequantizeLinear
+    model.12.conv.bias
+  Outputs:
+    141
+
+Node 185: QuantizeLinear (Name: 141_QuantizeLinear)
+  Inputs:
+    141
+    141_scale
+    141_zero_point
+  Outputs:
+    141_QuantizeLinear
+
+Node 186: DequantizeLinear (Name: 141_DequantizeLinear)
+  Inputs:
+    141_QuantizeLinear
+    141_scale
+    141_zero_point
+  Outputs:
+    141_DequantizeLinear
+
+Node 187: LeakyRelu (Name: LeakyRelu_23)
+  Inputs:
+    141_DequantizeLinear
+  Outputs:
+    142
+
+Node 188: QuantizeLinear (Name: 142_QuantizeLinear)
+  Inputs:
+    142
+    142_scale
+    142_zero_point
+  Outputs:
+    142_QuantizeLinear
+
+Node 189: DequantizeLinear (Name: 142_DequantizeLinear)
+  Inputs:
+    142_QuantizeLinear
+    142_scale
+    142_zero_point
+  Outputs:
+    142_DequantizeLinear
+
+Node 190: Concat (Name: Concat_24)
+  Inputs:
+    142_DequantizeLinear
+    140_DequantizeLinear
+    138_DequantizeLinear
+    136_DequantizeLinear
+  Outputs:
+    143
+
+Node 191: QuantizeLinear (Name: 143_QuantizeLinear)
+  Inputs:
+    143
+    143_scale
+    143_zero_point
+  Outputs:
+    143_QuantizeLinear
+
+Node 192: DequantizeLinear (Name: 143_DequantizeLinear)
+  Inputs:
+    143_QuantizeLinear
+    143_scale
+    143_zero_point
+  Outputs:
+    143_DequantizeLinear
+
+Node 193: Conv (Name: Conv_25)
+  Inputs:
+    143_DequantizeLinear
+    model.14.conv.weight_DequantizeLinear
+    model.14.conv.bias
+  Outputs:
+    144
+
+Node 194: QuantizeLinear (Name: 144_QuantizeLinear)
+  Inputs:
+    144
+    144_scale
+    144_zero_point
+  Outputs:
+    144_QuantizeLinear
+
+Node 195: DequantizeLinear (Name: 144_DequantizeLinear)
+  Inputs:
+    144_QuantizeLinear
+    144_scale
+    144_zero_point
+  Outputs:
+    144_DequantizeLinear
+
+Node 196: LeakyRelu (Name: LeakyRelu_26)
+  Inputs:
+    144_DequantizeLinear
+  Outputs:
+    145
+
+Node 197: QuantizeLinear (Name: 145_QuantizeLinear)
+  Inputs:
+    145
+    145_scale
+    145_zero_point
+  Outputs:
+    145_QuantizeLinear
+
+Node 198: DequantizeLinear (Name: 145_DequantizeLinear)
+  Inputs:
+    145_QuantizeLinear
+    145_scale
+    145_zero_point
+  Outputs:
+    145_DequantizeLinear
+
+Node 199: MaxPool (Name: MaxPool_27)
+  Inputs:
+    145_DequantizeLinear
+  Outputs:
+    146
+
+Node 200: Conv (Name: Conv_86)
+  Inputs:
+    145_DequantizeLinear
+    model.50.conv.weight_DequantizeLinear
+    model.50.conv.bias
+  Outputs:
+    211
+
+Node 201: QuantizeLinear (Name: 146_QuantizeLinear)
+  Inputs:
+    146
+    146_scale
+    146_zero_point
+  Outputs:
+    146_QuantizeLinear
+
+Node 202: QuantizeLinear (Name: 211_QuantizeLinear)
+  Inputs:
+    211
+    211_scale
+    211_zero_point
+  Outputs:
+    211_QuantizeLinear
+
+Node 203: DequantizeLinear (Name: 146_DequantizeLinear)
+  Inputs:
+    146_QuantizeLinear
+    146_scale
+    146_zero_point
+  Outputs:
+    146_DequantizeLinear
+
+Node 204: DequantizeLinear (Name: 211_DequantizeLinear)
+  Inputs:
+    211_QuantizeLinear
+    211_scale
+    211_zero_point
+  Outputs:
+    211_DequantizeLinear
+
+Node 205: Conv (Name: Conv_28)
+  Inputs:
+    146_DequantizeLinear
+    model.16.conv.weight_DequantizeLinear
+    model.16.conv.bias
+  Outputs:
+    147
+
+Node 206: Conv (Name: Conv_30)
+  Inputs:
+    146_DequantizeLinear
+    model.17.conv.weight_DequantizeLinear
+    model.17.conv.bias
+  Outputs:
+    149
+
+Node 207: LeakyRelu (Name: LeakyRelu_87)
+  Inputs:
+    211_DequantizeLinear
+  Outputs:
+    212
+
+Node 208: QuantizeLinear (Name: 147_QuantizeLinear)
+  Inputs:
+    147
+    147_scale
+    147_zero_point
+  Outputs:
+    147_QuantizeLinear
+
+Node 209: QuantizeLinear (Name: 149_QuantizeLinear)
+  Inputs:
+    149
+    149_scale
+    149_zero_point
+  Outputs:
+    149_QuantizeLinear
+
+Node 210: QuantizeLinear (Name: 212_QuantizeLinear)
+  Inputs:
+    212
+    212_scale
+    212_zero_point
+  Outputs:
+    212_QuantizeLinear
+
+Node 211: DequantizeLinear (Name: 147_DequantizeLinear)
+  Inputs:
+    147_QuantizeLinear
+    147_scale
+    147_zero_point
+  Outputs:
+    147_DequantizeLinear
+
+Node 212: DequantizeLinear (Name: 149_DequantizeLinear)
+  Inputs:
+    149_QuantizeLinear
+    149_scale
+    149_zero_point
+  Outputs:
+    149_DequantizeLinear
+
+Node 213: DequantizeLinear (Name: 212_DequantizeLinear)
+  Inputs:
+    212_QuantizeLinear
+    212_scale
+    212_zero_point
+  Outputs:
+    212_DequantizeLinear
+
+Node 214: LeakyRelu (Name: LeakyRelu_29)
+  Inputs:
+    147_DequantizeLinear
+  Outputs:
+    148
+
+Node 215: LeakyRelu (Name: LeakyRelu_31)
+  Inputs:
+    149_DequantizeLinear
+  Outputs:
+    150
+
+Node 216: QuantizeLinear (Name: 148_QuantizeLinear)
+  Inputs:
+    148
+    148_scale
+    148_zero_point
+  Outputs:
+    148_QuantizeLinear
+
+Node 217: QuantizeLinear (Name: 150_QuantizeLinear)
+  Inputs:
+    150
+    150_scale
+    150_zero_point
+  Outputs:
+    150_QuantizeLinear
+
+Node 218: DequantizeLinear (Name: 148_DequantizeLinear)
+  Inputs:
+    148_QuantizeLinear
+    148_scale
+    148_zero_point
+  Outputs:
+    148_DequantizeLinear
+
+Node 219: DequantizeLinear (Name: 150_DequantizeLinear)
+  Inputs:
+    150_QuantizeLinear
+    150_scale
+    150_zero_point
+  Outputs:
+    150_DequantizeLinear
+
+Node 220: Conv (Name: Conv_32)
+  Inputs:
+    150_DequantizeLinear
+    model.18.conv.weight_DequantizeLinear
+    model.18.conv.bias
+  Outputs:
+    151
+
+Node 221: QuantizeLinear (Name: 151_QuantizeLinear)
+  Inputs:
+    151
+    151_scale
+    151_zero_point
+  Outputs:
+    151_QuantizeLinear
+
+Node 222: DequantizeLinear (Name: 151_DequantizeLinear)
+  Inputs:
+    151_QuantizeLinear
+    151_scale
+    151_zero_point
+  Outputs:
+    151_DequantizeLinear
+
+Node 223: LeakyRelu (Name: LeakyRelu_33)
+  Inputs:
+    151_DequantizeLinear
+  Outputs:
+    152
+
+Node 224: QuantizeLinear (Name: 152_QuantizeLinear)
+  Inputs:
+    152
+    152_scale
+    152_zero_point
+  Outputs:
+    152_QuantizeLinear
+
+Node 225: DequantizeLinear (Name: 152_DequantizeLinear)
+  Inputs:
+    152_QuantizeLinear
+    152_scale
+    152_zero_point
+  Outputs:
+    152_DequantizeLinear
+
+Node 226: Conv (Name: Conv_34)
+  Inputs:
+    152_DequantizeLinear
+    model.19.conv.weight_DequantizeLinear
+    model.19.conv.bias
+  Outputs:
+    153
+
+Node 227: QuantizeLinear (Name: 153_QuantizeLinear)
+  Inputs:
+    153
+    153_scale
+    153_zero_point
+  Outputs:
+    153_QuantizeLinear
+
+Node 228: DequantizeLinear (Name: 153_DequantizeLinear)
+  Inputs:
+    153_QuantizeLinear
+    153_scale
+    153_zero_point
+  Outputs:
+    153_DequantizeLinear
+
+Node 229: LeakyRelu (Name: LeakyRelu_35)
+  Inputs:
+    153_DequantizeLinear
+  Outputs:
+    154
+
+Node 230: QuantizeLinear (Name: 154_QuantizeLinear)
+  Inputs:
+    154
+    154_scale
+    154_zero_point
+  Outputs:
+    154_QuantizeLinear
+
+Node 231: DequantizeLinear (Name: 154_DequantizeLinear)
+  Inputs:
+    154_QuantizeLinear
+    154_scale
+    154_zero_point
+  Outputs:
+    154_DequantizeLinear
+
+Node 232: Concat (Name: Concat_36)
+  Inputs:
+    154_DequantizeLinear
+    152_DequantizeLinear
+    150_DequantizeLinear
+    148_DequantizeLinear
+  Outputs:
+    155
+
+Node 233: QuantizeLinear (Name: 155_QuantizeLinear)
+  Inputs:
+    155
+    155_scale
+    155_zero_point
+  Outputs:
+    155_QuantizeLinear
+
+Node 234: DequantizeLinear (Name: 155_DequantizeLinear)
+  Inputs:
+    155_QuantizeLinear
+    155_scale
+    155_zero_point
+  Outputs:
+    155_DequantizeLinear
+
+Node 235: Conv (Name: Conv_37)
+  Inputs:
+    155_DequantizeLinear
+    model.21.conv.weight_DequantizeLinear
+    model.21.conv.bias
+  Outputs:
+    156
+
+Node 236: QuantizeLinear (Name: 156_QuantizeLinear)
+  Inputs:
+    156
+    156_scale
+    156_zero_point
+  Outputs:
+    156_QuantizeLinear
+
+Node 237: DequantizeLinear (Name: 156_DequantizeLinear)
+  Inputs:
+    156_QuantizeLinear
+    156_scale
+    156_zero_point
+  Outputs:
+    156_DequantizeLinear
+
+Node 238: LeakyRelu (Name: LeakyRelu_38)
+  Inputs:
+    156_DequantizeLinear
+  Outputs:
+    157
+
+Node 239: QuantizeLinear (Name: 157_QuantizeLinear)
+  Inputs:
+    157
+    157_scale
+    157_zero_point
+  Outputs:
+    157_QuantizeLinear
+
+Node 240: DequantizeLinear (Name: 157_DequantizeLinear)
+  Inputs:
+    157_QuantizeLinear
+    157_scale
+    157_zero_point
+  Outputs:
+    157_DequantizeLinear
+
+Node 241: MaxPool (Name: MaxPool_39)
+  Inputs:
+    157_DequantizeLinear
+  Outputs:
+    158
+
+Node 242: Conv (Name: Conv_68)
+  Inputs:
+    157_DequantizeLinear
+    model.40.conv.weight_DequantizeLinear
+    model.40.conv.bias
+  Outputs:
+    190
+
+Node 243: QuantizeLinear (Name: 158_QuantizeLinear)
+  Inputs:
+    158
+    158_scale
+    158_zero_point
+  Outputs:
+    158_QuantizeLinear
+
+Node 244: QuantizeLinear (Name: 190_QuantizeLinear)
+  Inputs:
+    190
+    190_scale
+    190_zero_point
+  Outputs:
+    190_QuantizeLinear
+
+Node 245: DequantizeLinear (Name: 158_DequantizeLinear)
+  Inputs:
+    158_QuantizeLinear
+    158_scale
+    158_zero_point
+  Outputs:
+    158_DequantizeLinear
+
+Node 246: DequantizeLinear (Name: 190_DequantizeLinear)
+  Inputs:
+    190_QuantizeLinear
+    190_scale
+    190_zero_point
+  Outputs:
+    190_DequantizeLinear
+
+Node 247: Conv (Name: Conv_40)
+  Inputs:
+    158_DequantizeLinear
+    model.23.conv.weight_DequantizeLinear
+    model.23.conv.bias
+  Outputs:
+    159
+
+Node 248: Conv (Name: Conv_42)
+  Inputs:
+    158_DequantizeLinear
+    model.24.conv.weight_DequantizeLinear
+    model.24.conv.bias
+  Outputs:
+    161
+
+Node 249: LeakyRelu (Name: LeakyRelu_69)
+  Inputs:
+    190_DequantizeLinear
+  Outputs:
+    191
+
+Node 250: QuantizeLinear (Name: 159_QuantizeLinear)
+  Inputs:
+    159
+    159_scale
+    159_zero_point
+  Outputs:
+    159_QuantizeLinear
+
+Node 251: QuantizeLinear (Name: 161_QuantizeLinear)
+  Inputs:
+    161
+    161_scale
+    161_zero_point
+  Outputs:
+    161_QuantizeLinear
+
+Node 252: QuantizeLinear (Name: 191_QuantizeLinear)
+  Inputs:
+    191
+    191_scale
+    191_zero_point
+  Outputs:
+    191_QuantizeLinear
+
+Node 253: DequantizeLinear (Name: 159_DequantizeLinear)
+  Inputs:
+    159_QuantizeLinear
+    159_scale
+    159_zero_point
+  Outputs:
+    159_DequantizeLinear
+
+Node 254: DequantizeLinear (Name: 161_DequantizeLinear)
+  Inputs:
+    161_QuantizeLinear
+    161_scale
+    161_zero_point
+  Outputs:
+    161_DequantizeLinear
+
+Node 255: DequantizeLinear (Name: 191_DequantizeLinear)
+  Inputs:
+    191_QuantizeLinear
+    191_scale
+    191_zero_point
+  Outputs:
+    191_DequantizeLinear
+
+Node 256: LeakyRelu (Name: LeakyRelu_41)
+  Inputs:
+    159_DequantizeLinear
+  Outputs:
+    160
+
+Node 257: LeakyRelu (Name: LeakyRelu_43)
+  Inputs:
+    161_DequantizeLinear
+  Outputs:
+    162
+
+Node 258: QuantizeLinear (Name: 160_QuantizeLinear)
+  Inputs:
+    160
+    160_scale
+    160_zero_point
+  Outputs:
+    160_QuantizeLinear
+
+Node 259: QuantizeLinear (Name: 162_QuantizeLinear)
+  Inputs:
+    162
+    162_scale
+    162_zero_point
+  Outputs:
+    162_QuantizeLinear
+
+Node 260: DequantizeLinear (Name: 160_DequantizeLinear)
+  Inputs:
+    160_QuantizeLinear
+    160_scale
+    160_zero_point
+  Outputs:
+    160_DequantizeLinear
+
+Node 261: DequantizeLinear (Name: 162_DequantizeLinear)
+  Inputs:
+    162_QuantizeLinear
+    162_scale
+    162_zero_point
+  Outputs:
+    162_DequantizeLinear
+
+Node 262: Conv (Name: Conv_44)
+  Inputs:
+    162_DequantizeLinear
+    model.25.conv.weight_DequantizeLinear
+    model.25.conv.bias
+  Outputs:
+    163
+
+Node 263: QuantizeLinear (Name: 163_QuantizeLinear)
+  Inputs:
+    163
+    163_scale
+    163_zero_point
+  Outputs:
+    163_QuantizeLinear
+
+Node 264: DequantizeLinear (Name: 163_DequantizeLinear)
+  Inputs:
+    163_QuantizeLinear
+    163_scale
+    163_zero_point
+  Outputs:
+    163_DequantizeLinear
+
+Node 265: LeakyRelu (Name: LeakyRelu_45)
+  Inputs:
+    163_DequantizeLinear
+  Outputs:
+    164
+
+Node 266: QuantizeLinear (Name: 164_QuantizeLinear)
+  Inputs:
+    164
+    164_scale
+    164_zero_point
+  Outputs:
+    164_QuantizeLinear
+
+Node 267: DequantizeLinear (Name: 164_DequantizeLinear)
+  Inputs:
+    164_QuantizeLinear
+    164_scale
+    164_zero_point
+  Outputs:
+    164_DequantizeLinear
+
+Node 268: Conv (Name: Conv_46)
+  Inputs:
+    164_DequantizeLinear
+    model.26.conv.weight_DequantizeLinear
+    model.26.conv.bias
+  Outputs:
+    165
+
+Node 269: QuantizeLinear (Name: 165_QuantizeLinear)
+  Inputs:
+    165
+    165_scale
+    165_zero_point
+  Outputs:
+    165_QuantizeLinear
+
+Node 270: DequantizeLinear (Name: 165_DequantizeLinear)
+  Inputs:
+    165_QuantizeLinear
+    165_scale
+    165_zero_point
+  Outputs:
+    165_DequantizeLinear
+
+Node 271: LeakyRelu (Name: LeakyRelu_47)
+  Inputs:
+    165_DequantizeLinear
+  Outputs:
+    166
+
+Node 272: QuantizeLinear (Name: 166_QuantizeLinear)
+  Inputs:
+    166
+    166_scale
+    166_zero_point
+  Outputs:
+    166_QuantizeLinear
+
+Node 273: DequantizeLinear (Name: 166_DequantizeLinear)
+  Inputs:
+    166_QuantizeLinear
+    166_scale
+    166_zero_point
+  Outputs:
+    166_DequantizeLinear
+
+Node 274: Concat (Name: Concat_48)
+  Inputs:
+    166_DequantizeLinear
+    164_DequantizeLinear
+    162_DequantizeLinear
+    160_DequantizeLinear
+  Outputs:
+    167
+
+Node 275: QuantizeLinear (Name: 167_QuantizeLinear)
+  Inputs:
+    167
+    167_scale
+    167_zero_point
+  Outputs:
+    167_QuantizeLinear
+
+Node 276: DequantizeLinear (Name: 167_DequantizeLinear)
+  Inputs:
+    167_QuantizeLinear
+    167_scale
+    167_zero_point
+  Outputs:
+    167_DequantizeLinear
+
+Node 277: Conv (Name: Conv_49)
+  Inputs:
+    167_DequantizeLinear
+    model.28.conv.weight_DequantizeLinear
+    model.28.conv.bias
+  Outputs:
+    168
+
+Node 278: QuantizeLinear (Name: 168_QuantizeLinear)
+  Inputs:
+    168
+    168_scale
+    168_zero_point
+  Outputs:
+    168_QuantizeLinear
+
+Node 279: DequantizeLinear (Name: 168_DequantizeLinear)
+  Inputs:
+    168_QuantizeLinear
+    168_scale
+    168_zero_point
+  Outputs:
+    168_DequantizeLinear
+
+Node 280: LeakyRelu (Name: LeakyRelu_50)
+  Inputs:
+    168_DequantizeLinear
+  Outputs:
+    169
+
+Node 281: QuantizeLinear (Name: 169_QuantizeLinear)
+  Inputs:
+    169
+    169_scale
+    169_zero_point
+  Outputs:
+    169_QuantizeLinear
+
+Node 282: DequantizeLinear (Name: 169_DequantizeLinear)
+  Inputs:
+    169_QuantizeLinear
+    169_scale
+    169_zero_point
+  Outputs:
+    169_DequantizeLinear
+
+Node 283: Conv (Name: Conv_51)
+  Inputs:
+    169_DequantizeLinear
+    model.29.conv.weight_DequantizeLinear
+    model.29.conv.bias
+  Outputs:
+    170
+
+Node 284: Conv (Name: Conv_53)
+  Inputs:
+    169_DequantizeLinear
+    model.30.conv.weight_DequantizeLinear
+    model.30.conv.bias
+  Outputs:
+    172
+
+Node 285: QuantizeLinear (Name: 170_QuantizeLinear)
+  Inputs:
+    170
+    170_scale
+    170_zero_point
+  Outputs:
+    170_QuantizeLinear
+
+Node 286: QuantizeLinear (Name: 172_QuantizeLinear)
+  Inputs:
+    172
+    172_scale
+    172_zero_point
+  Outputs:
+    172_QuantizeLinear
+
+Node 287: DequantizeLinear (Name: 170_DequantizeLinear)
+  Inputs:
+    170_QuantizeLinear
+    170_scale
+    170_zero_point
+  Outputs:
+    170_DequantizeLinear
+
+Node 288: DequantizeLinear (Name: 172_DequantizeLinear)
+  Inputs:
+    172_QuantizeLinear
+    172_scale
+    172_zero_point
+  Outputs:
+    172_DequantizeLinear
+
+Node 289: LeakyRelu (Name: LeakyRelu_52)
+  Inputs:
+    170_DequantizeLinear
+  Outputs:
+    171
+
+Node 290: LeakyRelu (Name: LeakyRelu_54)
+  Inputs:
+    172_DequantizeLinear
+  Outputs:
+    173
+
+Node 291: QuantizeLinear (Name: 171_QuantizeLinear)
+  Inputs:
+    171
+    171_scale
+    171_zero_point
+  Outputs:
+    171_QuantizeLinear
+
+Node 292: QuantizeLinear (Name: 173_QuantizeLinear)
+  Inputs:
+    173
+    173_scale
+    173_zero_point
+  Outputs:
+    173_QuantizeLinear
+
+Node 293: DequantizeLinear (Name: 171_DequantizeLinear)
+  Inputs:
+    171_QuantizeLinear
+    171_scale
+    171_zero_point
+  Outputs:
+    171_DequantizeLinear
+
+Node 294: DequantizeLinear (Name: 173_DequantizeLinear)
+  Inputs:
+    173_QuantizeLinear
+    173_scale
+    173_zero_point
+  Outputs:
+    173_DequantizeLinear
+
+Node 295: MaxPool (Name: MaxPool_55)
+  Inputs:
+    173_DequantizeLinear
+  Outputs:
+    174
+
+Node 296: MaxPool (Name: MaxPool_56)
+  Inputs:
+    173_DequantizeLinear
+  Outputs:
+    175
+
+Node 297: MaxPool (Name: MaxPool_57)
+  Inputs:
+    173_DequantizeLinear
+  Outputs:
+    176
+
+Node 298: QuantizeLinear (Name: 174_QuantizeLinear)
+  Inputs:
+    174
+    174_scale
+    174_zero_point
+  Outputs:
+    174_QuantizeLinear
+
+Node 299: QuantizeLinear (Name: 175_QuantizeLinear)
+  Inputs:
+    175
+    175_scale
+    175_zero_point
+  Outputs:
+    175_QuantizeLinear
+
+Node 300: QuantizeLinear (Name: 176_QuantizeLinear)
+  Inputs:
+    176
+    176_scale
+    176_zero_point
+  Outputs:
+    176_QuantizeLinear
+
+Node 301: DequantizeLinear (Name: 174_DequantizeLinear)
+  Inputs:
+    174_QuantizeLinear
+    174_scale
+    174_zero_point
+  Outputs:
+    174_DequantizeLinear
+
+Node 302: DequantizeLinear (Name: 175_DequantizeLinear)
+  Inputs:
+    175_QuantizeLinear
+    175_scale
+    175_zero_point
+  Outputs:
+    175_DequantizeLinear
+
+Node 303: DequantizeLinear (Name: 176_DequantizeLinear)
+  Inputs:
+    176_QuantizeLinear
+    176_scale
+    176_zero_point
+  Outputs:
+    176_DequantizeLinear
+
+Node 304: Concat (Name: Concat_58)
+  Inputs:
+    176_DequantizeLinear
+    175_DequantizeLinear
+    174_DequantizeLinear
+    173_DequantizeLinear
+  Outputs:
+    177
+
+Node 305: QuantizeLinear (Name: 177_QuantizeLinear)
+  Inputs:
+    177
+    177_scale
+    177_zero_point
+  Outputs:
+    177_QuantizeLinear
+
+Node 306: DequantizeLinear (Name: 177_DequantizeLinear)
+  Inputs:
+    177_QuantizeLinear
+    177_scale
+    177_zero_point
+  Outputs:
+    177_DequantizeLinear
+
+Node 307: Conv (Name: Conv_59)
+  Inputs:
+    177_DequantizeLinear
+    model.35.conv.weight_DequantizeLinear
+    model.35.conv.bias
+  Outputs:
+    178
+
+Node 308: QuantizeLinear (Name: 178_QuantizeLinear)
+  Inputs:
+    178
+    178_scale
+    178_zero_point
+  Outputs:
+    178_QuantizeLinear
+
+Node 309: DequantizeLinear (Name: 178_DequantizeLinear)
+  Inputs:
+    178_QuantizeLinear
+    178_scale
+    178_zero_point
+  Outputs:
+    178_DequantizeLinear
+
+Node 310: LeakyRelu (Name: LeakyRelu_60)
+  Inputs:
+    178_DequantizeLinear
+  Outputs:
+    179
+
+Node 311: QuantizeLinear (Name: 179_QuantizeLinear)
+  Inputs:
+    179
+    179_scale
+    179_zero_point
+  Outputs:
+    179_QuantizeLinear
+
+Node 312: DequantizeLinear (Name: 179_DequantizeLinear)
+  Inputs:
+    179_QuantizeLinear
+    179_scale
+    179_zero_point
+  Outputs:
+    179_DequantizeLinear
+
+Node 313: Concat (Name: Concat_61)
+  Inputs:
+    179_DequantizeLinear
+    171_DequantizeLinear
+  Outputs:
+    180
+
+Node 314: QuantizeLinear (Name: 180_QuantizeLinear)
+  Inputs:
+    180
+    180_scale
+    180_zero_point
+  Outputs:
+    180_QuantizeLinear
+
+Node 315: DequantizeLinear (Name: 180_DequantizeLinear)
+  Inputs:
+    180_QuantizeLinear
+    180_scale
+    180_zero_point
+  Outputs:
+    180_DequantizeLinear
+
+Node 316: Conv (Name: Conv_62)
+  Inputs:
+    180_DequantizeLinear
+    model.37.conv.weight_DequantizeLinear
+    model.37.conv.bias
+  Outputs:
+    181
+
+Node 317: QuantizeLinear (Name: 181_QuantizeLinear)
+  Inputs:
+    181
+    181_scale
+    181_zero_point
+  Outputs:
+    181_QuantizeLinear
+
+Node 318: DequantizeLinear (Name: 181_DequantizeLinear)
+  Inputs:
+    181_QuantizeLinear
+    181_scale
+    181_zero_point
+  Outputs:
+    181_DequantizeLinear
+
+Node 319: LeakyRelu (Name: LeakyRelu_63)
+  Inputs:
+    181_DequantizeLinear
+  Outputs:
+    182
+
+Node 320: QuantizeLinear (Name: 182_QuantizeLinear)
+  Inputs:
+    182
+    182_scale
+    182_zero_point
+  Outputs:
+    182_QuantizeLinear
+
+Node 321: DequantizeLinear (Name: 182_DequantizeLinear)
+  Inputs:
+    182_QuantizeLinear
+    182_scale
+    182_zero_point
+  Outputs:
+    182_DequantizeLinear
+
+Node 322: Conv (Name: Conv_64)
+  Inputs:
+    182_DequantizeLinear
+    model.38.conv.weight_DequantizeLinear
+    model.38.conv.bias
+  Outputs:
+    183
+
+Node 323: QuantizeLinear (Name: 183_QuantizeLinear)
+  Inputs:
+    183
+    183_scale
+    183_zero_point
+  Outputs:
+    183_QuantizeLinear
+
+Node 324: DequantizeLinear (Name: 183_DequantizeLinear)
+  Inputs:
+    183_QuantizeLinear
+    183_scale
+    183_zero_point
+  Outputs:
+    183_DequantizeLinear
+
+Node 325: LeakyRelu (Name: LeakyRelu_65)
+  Inputs:
+    183_DequantizeLinear
+  Outputs:
+    184
+
+Node 326: QuantizeLinear (Name: 184_QuantizeLinear)
+  Inputs:
+    184
+    184_scale
+    184_zero_point
+  Outputs:
+    184_QuantizeLinear
+
+Node 327: DequantizeLinear (Name: 184_DequantizeLinear)
+  Inputs:
+    184_QuantizeLinear
+    184_scale
+    184_zero_point
+  Outputs:
+    184_DequantizeLinear
+
+Node 328: Resize (Name: Resize_67)
+  Inputs:
+    184_DequantizeLinear
+    188
+    262
+  Outputs:
+    189
+
+Node 329: QuantizeLinear (Name: 189_QuantizeLinear)
+  Inputs:
+    189
+    189_scale
+    189_zero_point
+  Outputs:
+    189_QuantizeLinear
+
+Node 330: DequantizeLinear (Name: 189_DequantizeLinear)
+  Inputs:
+    189_QuantizeLinear
+    189_scale
+    189_zero_point
+  Outputs:
+    189_DequantizeLinear
+
+Node 331: Concat (Name: Concat_70)
+  Inputs:
+    191_DequantizeLinear
+    189_DequantizeLinear
+  Outputs:
+    192
+
+Node 332: QuantizeLinear (Name: 192_QuantizeLinear)
+  Inputs:
+    192
+    192_scale
+    192_zero_point
+  Outputs:
+    192_QuantizeLinear
+
+Node 333: DequantizeLinear (Name: 192_DequantizeLinear)
+  Inputs:
+    192_QuantizeLinear
+    192_scale
+    192_zero_point
+  Outputs:
+    192_DequantizeLinear
+
+Node 334: Conv (Name: Conv_71)
+  Inputs:
+    192_DequantizeLinear
+    model.42.conv.weight_DequantizeLinear
+    model.42.conv.bias
+  Outputs:
+    193
+
+Node 335: Conv (Name: Conv_73)
+  Inputs:
+    192_DequantizeLinear
+    model.43.conv.weight_DequantizeLinear
+    model.43.conv.bias
+  Outputs:
+    195
+
+Node 336: QuantizeLinear (Name: 193_QuantizeLinear)
+  Inputs:
+    193
+    193_scale
+    193_zero_point
+  Outputs:
+    193_QuantizeLinear
+
+Node 337: QuantizeLinear (Name: 195_QuantizeLinear)
+  Inputs:
+    195
+    195_scale
+    195_zero_point
+  Outputs:
+    195_QuantizeLinear
+
+Node 338: DequantizeLinear (Name: 193_DequantizeLinear)
+  Inputs:
+    193_QuantizeLinear
+    193_scale
+    193_zero_point
+  Outputs:
+    193_DequantizeLinear
+
+Node 339: DequantizeLinear (Name: 195_DequantizeLinear)
+  Inputs:
+    195_QuantizeLinear
+    195_scale
+    195_zero_point
+  Outputs:
+    195_DequantizeLinear
+
+Node 340: LeakyRelu (Name: LeakyRelu_72)
+  Inputs:
+    193_DequantizeLinear
+  Outputs:
+    194
+
+Node 341: LeakyRelu (Name: LeakyRelu_74)
+  Inputs:
+    195_DequantizeLinear
+  Outputs:
+    196
+
+Node 342: QuantizeLinear (Name: 194_QuantizeLinear)
+  Inputs:
+    194
+    194_scale
+    194_zero_point
+  Outputs:
+    194_QuantizeLinear
+
+Node 343: QuantizeLinear (Name: 196_QuantizeLinear)
+  Inputs:
+    196
+    196_scale
+    196_zero_point
+  Outputs:
+    196_QuantizeLinear
+
+Node 344: DequantizeLinear (Name: 194_DequantizeLinear)
+  Inputs:
+    194_QuantizeLinear
+    194_scale
+    194_zero_point
+  Outputs:
+    194_DequantizeLinear
+
+Node 345: DequantizeLinear (Name: 196_DequantizeLinear)
+  Inputs:
+    196_QuantizeLinear
+    196_scale
+    196_zero_point
+  Outputs:
+    196_DequantizeLinear
+
+Node 346: Conv (Name: Conv_75)
+  Inputs:
+    196_DequantizeLinear
+    model.44.conv.weight_DequantizeLinear
+    model.44.conv.bias
+  Outputs:
+    197
+
+Node 347: QuantizeLinear (Name: 197_QuantizeLinear)
+  Inputs:
+    197
+    197_scale
+    197_zero_point
+  Outputs:
+    197_QuantizeLinear
+
+Node 348: DequantizeLinear (Name: 197_DequantizeLinear)
+  Inputs:
+    197_QuantizeLinear
+    197_scale
+    197_zero_point
+  Outputs:
+    197_DequantizeLinear
+
+Node 349: LeakyRelu (Name: LeakyRelu_76)
+  Inputs:
+    197_DequantizeLinear
+  Outputs:
+    198
+
+Node 350: QuantizeLinear (Name: 198_QuantizeLinear)
+  Inputs:
+    198
+    198_scale
+    198_zero_point
+  Outputs:
+    198_QuantizeLinear
+
+Node 351: DequantizeLinear (Name: 198_DequantizeLinear)
+  Inputs:
+    198_QuantizeLinear
+    198_scale
+    198_zero_point
+  Outputs:
+    198_DequantizeLinear
+
+Node 352: Conv (Name: Conv_77)
+  Inputs:
+    198_DequantizeLinear
+    model.45.conv.weight_DequantizeLinear
+    model.45.conv.bias
+  Outputs:
+    199
+
+Node 353: QuantizeLinear (Name: 199_QuantizeLinear)
+  Inputs:
+    199
+    199_scale
+    199_zero_point
+  Outputs:
+    199_QuantizeLinear
+
+Node 354: DequantizeLinear (Name: 199_DequantizeLinear)
+  Inputs:
+    199_QuantizeLinear
+    199_scale
+    199_zero_point
+  Outputs:
+    199_DequantizeLinear
+
+Node 355: LeakyRelu (Name: LeakyRelu_78)
+  Inputs:
+    199_DequantizeLinear
+  Outputs:
+    200
+
+Node 356: QuantizeLinear (Name: 200_QuantizeLinear)
+  Inputs:
+    200
+    200_scale
+    200_zero_point
+  Outputs:
+    200_QuantizeLinear
+
+Node 357: DequantizeLinear (Name: 200_DequantizeLinear)
+  Inputs:
+    200_QuantizeLinear
+    200_scale
+    200_zero_point
+  Outputs:
+    200_DequantizeLinear
+
+Node 358: Concat (Name: Concat_79)
+  Inputs:
+    200_DequantizeLinear
+    198_DequantizeLinear
+    196_DequantizeLinear
+    194_DequantizeLinear
+  Outputs:
+    201
+
+Node 359: QuantizeLinear (Name: 201_QuantizeLinear)
+  Inputs:
+    201
+    201_scale
+    201_zero_point
+  Outputs:
+    201_QuantizeLinear
+
+Node 360: DequantizeLinear (Name: 201_DequantizeLinear)
+  Inputs:
+    201_QuantizeLinear
+    201_scale
+    201_zero_point
+  Outputs:
+    201_DequantizeLinear
+
+Node 361: Conv (Name: Conv_80)
+  Inputs:
+    201_DequantizeLinear
+    model.47.conv.weight_DequantizeLinear
+    model.47.conv.bias
+  Outputs:
+    202
+
+Node 362: QuantizeLinear (Name: 202_QuantizeLinear)
+  Inputs:
+    202
+    202_scale
+    202_zero_point
+  Outputs:
+    202_QuantizeLinear
+
+Node 363: DequantizeLinear (Name: 202_DequantizeLinear)
+  Inputs:
+    202_QuantizeLinear
+    202_scale
+    202_zero_point
+  Outputs:
+    202_DequantizeLinear
+
+Node 364: LeakyRelu (Name: LeakyRelu_81)
+  Inputs:
+    202_DequantizeLinear
+  Outputs:
+    203
+
+Node 365: QuantizeLinear (Name: 203_QuantizeLinear)
+  Inputs:
+    203
+    203_scale
+    203_zero_point
+  Outputs:
+    203_QuantizeLinear
+
+Node 366: DequantizeLinear (Name: 203_DequantizeLinear)
+  Inputs:
+    203_QuantizeLinear
+    203_scale
+    203_zero_point
+  Outputs:
+    203_DequantizeLinear
+
+Node 367: Conv (Name: Conv_82)
+  Inputs:
+    203_DequantizeLinear
+    model.48.conv.weight_DequantizeLinear
+    model.48.conv.bias
+  Outputs:
+    204
+
+Node 368: QuantizeLinear (Name: 204_QuantizeLinear)
+  Inputs:
+    204
+    204_scale
+    204_zero_point
+  Outputs:
+    204_QuantizeLinear
+
+Node 369: DequantizeLinear (Name: 204_DequantizeLinear)
+  Inputs:
+    204_QuantizeLinear
+    204_scale
+    204_zero_point
+  Outputs:
+    204_DequantizeLinear
+
+Node 370: LeakyRelu (Name: LeakyRelu_83)
+  Inputs:
+    204_DequantizeLinear
+  Outputs:
+    205
+
+Node 371: QuantizeLinear (Name: 205_QuantizeLinear)
+  Inputs:
+    205
+    205_scale
+    205_zero_point
+  Outputs:
+    205_QuantizeLinear
+
+Node 372: DequantizeLinear (Name: 205_DequantizeLinear)
+  Inputs:
+    205_QuantizeLinear
+    205_scale
+    205_zero_point
+  Outputs:
+    205_DequantizeLinear
+
+Node 373: Resize (Name: Resize_85)
+  Inputs:
+    205_DequantizeLinear
+    209
+    263
+  Outputs:
+    210
+
+Node 374: QuantizeLinear (Name: 210_QuantizeLinear)
+  Inputs:
+    210
+    210_scale
+    210_zero_point
+  Outputs:
+    210_QuantizeLinear
+
+Node 375: DequantizeLinear (Name: 210_DequantizeLinear)
+  Inputs:
+    210_QuantizeLinear
+    210_scale
+    210_zero_point
+  Outputs:
+    210_DequantizeLinear
+
+Node 376: Concat (Name: Concat_88)
+  Inputs:
+    212_DequantizeLinear
+    210_DequantizeLinear
+  Outputs:
+    213
+
+Node 377: QuantizeLinear (Name: 213_QuantizeLinear)
+  Inputs:
+    213
+    213_scale
+    213_zero_point
+  Outputs:
+    213_QuantizeLinear
+
+Node 378: DequantizeLinear (Name: 213_DequantizeLinear)
+  Inputs:
+    213_QuantizeLinear
+    213_scale
+    213_zero_point
+  Outputs:
+    213_DequantizeLinear
+
+Node 379: Conv (Name: Conv_89)
+  Inputs:
+    213_DequantizeLinear
+    model.52.conv.weight_DequantizeLinear
+    model.52.conv.bias
+  Outputs:
+    214
+
+Node 380: Conv (Name: Conv_91)
+  Inputs:
+    213_DequantizeLinear
+    model.53.conv.weight_DequantizeLinear
+    model.53.conv.bias
+  Outputs:
+    216
+
+Node 381: QuantizeLinear (Name: 214_QuantizeLinear)
+  Inputs:
+    214
+    214_scale
+    214_zero_point
+  Outputs:
+    214_QuantizeLinear
+
+Node 382: QuantizeLinear (Name: 216_QuantizeLinear)
+  Inputs:
+    216
+    216_scale
+    216_zero_point
+  Outputs:
+    216_QuantizeLinear
+
+Node 383: DequantizeLinear (Name: 214_DequantizeLinear)
+  Inputs:
+    214_QuantizeLinear
+    214_scale
+    214_zero_point
+  Outputs:
+    214_DequantizeLinear
+
+Node 384: DequantizeLinear (Name: 216_DequantizeLinear)
+  Inputs:
+    216_QuantizeLinear
+    216_scale
+    216_zero_point
+  Outputs:
+    216_DequantizeLinear
+
+Node 385: LeakyRelu (Name: LeakyRelu_90)
+  Inputs:
+    214_DequantizeLinear
+  Outputs:
+    215
+
+Node 386: LeakyRelu (Name: LeakyRelu_92)
+  Inputs:
+    216_DequantizeLinear
+  Outputs:
+    217
+
+Node 387: QuantizeLinear (Name: 215_QuantizeLinear)
+  Inputs:
+    215
+    215_scale
+    215_zero_point
+  Outputs:
+    215_QuantizeLinear
+
+Node 388: QuantizeLinear (Name: 217_QuantizeLinear)
+  Inputs:
+    217
+    217_scale
+    217_zero_point
+  Outputs:
+    217_QuantizeLinear
+
+Node 389: DequantizeLinear (Name: 215_DequantizeLinear)
+  Inputs:
+    215_QuantizeLinear
+    215_scale
+    215_zero_point
+  Outputs:
+    215_DequantizeLinear
+
+Node 390: DequantizeLinear (Name: 217_DequantizeLinear)
+  Inputs:
+    217_QuantizeLinear
+    217_scale
+    217_zero_point
+  Outputs:
+    217_DequantizeLinear
+
+Node 391: Conv (Name: Conv_93)
+  Inputs:
+    217_DequantizeLinear
+    model.54.conv.weight_DequantizeLinear
+    model.54.conv.bias
+  Outputs:
+    218
+
+Node 392: QuantizeLinear (Name: 218_QuantizeLinear)
+  Inputs:
+    218
+    218_scale
+    218_zero_point
+  Outputs:
+    218_QuantizeLinear
+
+Node 393: DequantizeLinear (Name: 218_DequantizeLinear)
+  Inputs:
+    218_QuantizeLinear
+    218_scale
+    218_zero_point
+  Outputs:
+    218_DequantizeLinear
+
+Node 394: LeakyRelu (Name: LeakyRelu_94)
+  Inputs:
+    218_DequantizeLinear
+  Outputs:
+    219
+
+Node 395: QuantizeLinear (Name: 219_QuantizeLinear)
+  Inputs:
+    219
+    219_scale
+    219_zero_point
+  Outputs:
+    219_QuantizeLinear
+
+Node 396: DequantizeLinear (Name: 219_DequantizeLinear)
+  Inputs:
+    219_QuantizeLinear
+    219_scale
+    219_zero_point
+  Outputs:
+    219_DequantizeLinear
+
+Node 397: Conv (Name: Conv_95)
+  Inputs:
+    219_DequantizeLinear
+    model.55.conv.weight_DequantizeLinear
+    model.55.conv.bias
+  Outputs:
+    220
+
+Node 398: QuantizeLinear (Name: 220_QuantizeLinear)
+  Inputs:
+    220
+    220_scale
+    220_zero_point
+  Outputs:
+    220_QuantizeLinear
+
+Node 399: DequantizeLinear (Name: 220_DequantizeLinear)
+  Inputs:
+    220_QuantizeLinear
+    220_scale
+    220_zero_point
+  Outputs:
+    220_DequantizeLinear
+
+Node 400: LeakyRelu (Name: LeakyRelu_96)
+  Inputs:
+    220_DequantizeLinear
+  Outputs:
+    221
+
+Node 401: QuantizeLinear (Name: 221_QuantizeLinear)
+  Inputs:
+    221
+    221_scale
+    221_zero_point
+  Outputs:
+    221_QuantizeLinear
+
+Node 402: DequantizeLinear (Name: 221_DequantizeLinear)
+  Inputs:
+    221_QuantizeLinear
+    221_scale
+    221_zero_point
+  Outputs:
+    221_DequantizeLinear
+
+Node 403: Concat (Name: Concat_97)
+  Inputs:
+    221_DequantizeLinear
+    219_DequantizeLinear
+    217_DequantizeLinear
+    215_DequantizeLinear
+  Outputs:
+    222
+
+Node 404: QuantizeLinear (Name: 222_QuantizeLinear)
+  Inputs:
+    222
+    222_scale
+    222_zero_point
+  Outputs:
+    222_QuantizeLinear
+
+Node 405: DequantizeLinear (Name: 222_DequantizeLinear)
+  Inputs:
+    222_QuantizeLinear
+    222_scale
+    222_zero_point
+  Outputs:
+    222_DequantizeLinear
+
+Node 406: Conv (Name: Conv_98)
+  Inputs:
+    222_DequantizeLinear
+    model.57.conv.weight_DequantizeLinear
+    model.57.conv.bias
+  Outputs:
+    223
+
+Node 407: QuantizeLinear (Name: 223_QuantizeLinear)
+  Inputs:
+    223
+    223_scale
+    223_zero_point
+  Outputs:
+    223_QuantizeLinear
+
+Node 408: DequantizeLinear (Name: 223_DequantizeLinear)
+  Inputs:
+    223_QuantizeLinear
+    223_scale
+    223_zero_point
+  Outputs:
+    223_DequantizeLinear
+
+Node 409: LeakyRelu (Name: LeakyRelu_99)
+  Inputs:
+    223_DequantizeLinear
+  Outputs:
+    224
+
+Node 410: QuantizeLinear (Name: 224_QuantizeLinear)
+  Inputs:
+    224
+    224_scale
+    224_zero_point
+  Outputs:
+    224_QuantizeLinear
+
+Node 411: DequantizeLinear (Name: 224_DequantizeLinear)
+  Inputs:
+    224_QuantizeLinear
+    224_scale
+    224_zero_point
+  Outputs:
+    224_DequantizeLinear
+
+Node 412: Conv (Name: Conv_100)
+  Inputs:
+    224_DequantizeLinear
+    model.58.conv.weight_DequantizeLinear
+    model.58.conv.bias
+  Outputs:
+    225
+
+Node 413: Conv (Name: Conv_128)
+  Inputs:
+    224_DequantizeLinear
+    model.74.conv.weight_DequantizeLinear
+    model.74.conv.bias
+  Outputs:
+    253
+
+Node 414: QuantizeLinear (Name: 225_QuantizeLinear)
+  Inputs:
+    225
+    225_scale
+    225_zero_point
+  Outputs:
+    225_QuantizeLinear
+
+Node 415: QuantizeLinear (Name: 253_QuantizeLinear)
+  Inputs:
+    253
+    253_scale
+    253_zero_point
+  Outputs:
+    253_QuantizeLinear
+
+Node 416: DequantizeLinear (Name: 225_DequantizeLinear)
+  Inputs:
+    225_QuantizeLinear
+    225_scale
+    225_zero_point
+  Outputs:
+    225_DequantizeLinear
+
+Node 417: DequantizeLinear (Name: 253_DequantizeLinear)
+  Inputs:
+    253_QuantizeLinear
+    253_scale
+    253_zero_point
+  Outputs:
+    253_DequantizeLinear
+
+Node 418: LeakyRelu (Name: LeakyRelu_101)
+  Inputs:
+    225_DequantizeLinear
+  Outputs:
+    226
+
+Node 419: LeakyRelu (Name: LeakyRelu_129)
+  Inputs:
+    253_DequantizeLinear
+  Outputs:
+    254
+
+Node 420: QuantizeLinear (Name: 226_QuantizeLinear)
+  Inputs:
+    226
+    226_scale
+    226_zero_point
+  Outputs:
+    226_QuantizeLinear
+
+Node 421: QuantizeLinear (Name: 254_QuantizeLinear)
+  Inputs:
+    254
+    254_scale
+    254_zero_point
+  Outputs:
+    254_QuantizeLinear
+
+Node 422: DequantizeLinear (Name: 226_DequantizeLinear)
+  Inputs:
+    226_QuantizeLinear
+    226_scale
+    226_zero_point
+  Outputs:
+    226_DequantizeLinear
+
+Node 423: DequantizeLinear (Name: 254_DequantizeLinear)
+  Inputs:
+    254_QuantizeLinear
+    254_scale
+    254_zero_point
+  Outputs:
+    254_DequantizeLinear
+
+Node 424: Concat (Name: Concat_102)
+  Inputs:
+    226_DequantizeLinear
+    203_DequantizeLinear
+  Outputs:
+    227
+
+Node 425: Conv (Name: Conv_134)
+  Inputs:
+    254_DequantizeLinear
+    model.77.m.0.weight_DequantizeLinear
+    model.77.m.0.bias
+  Outputs:
+    output_QuantizeLinearInput
+
+Node 426: QuantizeLinear (Name: 227_QuantizeLinear)
+  Inputs:
+    227
+    227_scale
+    227_zero_point
+  Outputs:
+    227_QuantizeLinear
+
+Node 427: QuantizeLinear (Name: output_QuantizeLinear)
+  Inputs:
+    output_QuantizeLinearInput
+    output_scale
+    output_zero_point
+  Outputs:
+    output_QuantizeLinear
+
+Node 428: DequantizeLinear (Name: 227_DequantizeLinear)
+  Inputs:
+    227_QuantizeLinear
+    227_scale
+    227_zero_point
+  Outputs:
+    227_DequantizeLinear
+
+Node 429: DequantizeLinear (Name: output_DequantizeLinear)
+  Inputs:
+    output_QuantizeLinear
+    output_scale
+    output_zero_point
+  Outputs:
+    output
+
+Node 430: Conv (Name: Conv_103)
+  Inputs:
+    227_DequantizeLinear
+    model.60.conv.weight_DequantizeLinear
+    model.60.conv.bias
+  Outputs:
+    228
+
+Node 431: Conv (Name: Conv_105)
+  Inputs:
+    227_DequantizeLinear
+    model.61.conv.weight_DequantizeLinear
+    model.61.conv.bias
+  Outputs:
+    230
+
+Node 432: QuantizeLinear (Name: 228_QuantizeLinear)
+  Inputs:
+    228
+    228_scale
+    228_zero_point
+  Outputs:
+    228_QuantizeLinear
+
+Node 433: QuantizeLinear (Name: 230_QuantizeLinear)
+  Inputs:
+    230
+    230_scale
+    230_zero_point
+  Outputs:
+    230_QuantizeLinear
+
+Node 434: DequantizeLinear (Name: 228_DequantizeLinear)
+  Inputs:
+    228_QuantizeLinear
+    228_scale
+    228_zero_point
+  Outputs:
+    228_DequantizeLinear
+
+Node 435: DequantizeLinear (Name: 230_DequantizeLinear)
+  Inputs:
+    230_QuantizeLinear
+    230_scale
+    230_zero_point
+  Outputs:
+    230_DequantizeLinear
+
+Node 436: LeakyRelu (Name: LeakyRelu_104)
+  Inputs:
+    228_DequantizeLinear
+  Outputs:
+    229
+
+Node 437: LeakyRelu (Name: LeakyRelu_106)
+  Inputs:
+    230_DequantizeLinear
+  Outputs:
+    231
+
+Node 438: QuantizeLinear (Name: 229_QuantizeLinear)
+  Inputs:
+    229
+    229_scale
+    229_zero_point
+  Outputs:
+    229_QuantizeLinear
+
+Node 439: QuantizeLinear (Name: 231_QuantizeLinear)
+  Inputs:
+    231
+    231_scale
+    231_zero_point
+  Outputs:
+    231_QuantizeLinear
+
+Node 440: DequantizeLinear (Name: 229_DequantizeLinear)
+  Inputs:
+    229_QuantizeLinear
+    229_scale
+    229_zero_point
+  Outputs:
+    229_DequantizeLinear
+
+Node 441: DequantizeLinear (Name: 231_DequantizeLinear)
+  Inputs:
+    231_QuantizeLinear
+    231_scale
+    231_zero_point
+  Outputs:
+    231_DequantizeLinear
+
+Node 442: Conv (Name: Conv_107)
+  Inputs:
+    231_DequantizeLinear
+    model.62.conv.weight_DequantizeLinear
+    model.62.conv.bias
+  Outputs:
+    232
+
+Node 443: QuantizeLinear (Name: 232_QuantizeLinear)
+  Inputs:
+    232
+    232_scale
+    232_zero_point
+  Outputs:
+    232_QuantizeLinear
+
+Node 444: DequantizeLinear (Name: 232_DequantizeLinear)
+  Inputs:
+    232_QuantizeLinear
+    232_scale
+    232_zero_point
+  Outputs:
+    232_DequantizeLinear
+
+Node 445: LeakyRelu (Name: LeakyRelu_108)
+  Inputs:
+    232_DequantizeLinear
+  Outputs:
+    233
+
+Node 446: QuantizeLinear (Name: 233_QuantizeLinear)
+  Inputs:
+    233
+    233_scale
+    233_zero_point
+  Outputs:
+    233_QuantizeLinear
+
+Node 447: DequantizeLinear (Name: 233_DequantizeLinear)
+  Inputs:
+    233_QuantizeLinear
+    233_scale
+    233_zero_point
+  Outputs:
+    233_DequantizeLinear
+
+Node 448: Conv (Name: Conv_109)
+  Inputs:
+    233_DequantizeLinear
+    model.63.conv.weight_DequantizeLinear
+    model.63.conv.bias
+  Outputs:
+    234
+
+Node 449: QuantizeLinear (Name: 234_QuantizeLinear)
+  Inputs:
+    234
+    234_scale
+    234_zero_point
+  Outputs:
+    234_QuantizeLinear
+
+Node 450: DequantizeLinear (Name: 234_DequantizeLinear)
+  Inputs:
+    234_QuantizeLinear
+    234_scale
+    234_zero_point
+  Outputs:
+    234_DequantizeLinear
+
+Node 451: LeakyRelu (Name: LeakyRelu_110)
+  Inputs:
+    234_DequantizeLinear
+  Outputs:
+    235
+
+Node 452: QuantizeLinear (Name: 235_QuantizeLinear)
+  Inputs:
+    235
+    235_scale
+    235_zero_point
+  Outputs:
+    235_QuantizeLinear
+
+Node 453: DequantizeLinear (Name: 235_DequantizeLinear)
+  Inputs:
+    235_QuantizeLinear
+    235_scale
+    235_zero_point
+  Outputs:
+    235_DequantizeLinear
+
+Node 454: Concat (Name: Concat_111)
+  Inputs:
+    235_DequantizeLinear
+    233_DequantizeLinear
+    231_DequantizeLinear
+    229_DequantizeLinear
+  Outputs:
+    236
+
+Node 455: QuantizeLinear (Name: 236_QuantizeLinear)
+  Inputs:
+    236
+    236_scale
+    236_zero_point
+  Outputs:
+    236_QuantizeLinear
+
+Node 456: DequantizeLinear (Name: 236_DequantizeLinear)
+  Inputs:
+    236_QuantizeLinear
+    236_scale
+    236_zero_point
+  Outputs:
+    236_DequantizeLinear
+
+Node 457: Conv (Name: Conv_112)
+  Inputs:
+    236_DequantizeLinear
+    model.65.conv.weight_DequantizeLinear
+    model.65.conv.bias
+  Outputs:
+    237
+
+Node 458: QuantizeLinear (Name: 237_QuantizeLinear)
+  Inputs:
+    237
+    237_scale
+    237_zero_point
+  Outputs:
+    237_QuantizeLinear
+
+Node 459: DequantizeLinear (Name: 237_DequantizeLinear)
+  Inputs:
+    237_QuantizeLinear
+    237_scale
+    237_zero_point
+  Outputs:
+    237_DequantizeLinear
+
+Node 460: LeakyRelu (Name: LeakyRelu_113)
+  Inputs:
+    237_DequantizeLinear
+  Outputs:
+    238
+
+Node 461: QuantizeLinear (Name: 238_QuantizeLinear)
+  Inputs:
+    238
+    238_scale
+    238_zero_point
+  Outputs:
+    238_QuantizeLinear
+
+Node 462: DequantizeLinear (Name: 238_DequantizeLinear)
+  Inputs:
+    238_QuantizeLinear
+    238_scale
+    238_zero_point
+  Outputs:
+    238_DequantizeLinear
+
+Node 463: Conv (Name: Conv_114)
+  Inputs:
+    238_DequantizeLinear
+    model.66.conv.weight_DequantizeLinear
+    model.66.conv.bias
+  Outputs:
+    239
+
+Node 464: Conv (Name: Conv_130)
+  Inputs:
+    238_DequantizeLinear
+    model.75.conv.weight_DequantizeLinear
+    model.75.conv.bias
+  Outputs:
+    255
+
+Node 465: QuantizeLinear (Name: 239_QuantizeLinear)
+  Inputs:
+    239
+    239_scale
+    239_zero_point
+  Outputs:
+    239_QuantizeLinear
+
+Node 466: QuantizeLinear (Name: 255_QuantizeLinear)
+  Inputs:
+    255
+    255_scale
+    255_zero_point
+  Outputs:
+    255_QuantizeLinear
+
+Node 467: DequantizeLinear (Name: 239_DequantizeLinear)
+  Inputs:
+    239_QuantizeLinear
+    239_scale
+    239_zero_point
+  Outputs:
+    239_DequantizeLinear
+
+Node 468: DequantizeLinear (Name: 255_DequantizeLinear)
+  Inputs:
+    255_QuantizeLinear
+    255_scale
+    255_zero_point
+  Outputs:
+    255_DequantizeLinear
+
+Node 469: LeakyRelu (Name: LeakyRelu_115)
+  Inputs:
+    239_DequantizeLinear
+  Outputs:
+    240
+
+Node 470: LeakyRelu (Name: LeakyRelu_131)
+  Inputs:
+    255_DequantizeLinear
+  Outputs:
+    256
+
+Node 471: QuantizeLinear (Name: 240_QuantizeLinear)
+  Inputs:
+    240
+    240_scale
+    240_zero_point
+  Outputs:
+    240_QuantizeLinear
+
+Node 472: QuantizeLinear (Name: 256_QuantizeLinear)
+  Inputs:
+    256
+    256_scale
+    256_zero_point
+  Outputs:
+    256_QuantizeLinear
+
+Node 473: DequantizeLinear (Name: 240_DequantizeLinear)
+  Inputs:
+    240_QuantizeLinear
+    240_scale
+    240_zero_point
+  Outputs:
+    240_DequantizeLinear
+
+Node 474: DequantizeLinear (Name: 256_DequantizeLinear)
+  Inputs:
+    256_QuantizeLinear
+    256_scale
+    256_zero_point
+  Outputs:
+    256_DequantizeLinear
+
+Node 475: Concat (Name: Concat_116)
+  Inputs:
+    240_DequantizeLinear
+    182_DequantizeLinear
+  Outputs:
+    241
+
+Node 476: Conv (Name: Conv_135)
+  Inputs:
+    256_DequantizeLinear
+    model.77.m.1.weight_DequantizeLinear
+    model.77.m.1.bias
+  Outputs:
+    260_QuantizeLinearInput
+
+Node 477: QuantizeLinear (Name: 241_QuantizeLinear)
+  Inputs:
+    241
+    241_scale
+    241_zero_point
+  Outputs:
+    241_QuantizeLinear
+
+Node 478: QuantizeLinear (Name: 260_QuantizeLinear)
+  Inputs:
+    260_QuantizeLinearInput
+    260_scale
+    260_zero_point
+  Outputs:
+    260_QuantizeLinear
+
+Node 479: DequantizeLinear (Name: 241_DequantizeLinear)
+  Inputs:
+    241_QuantizeLinear
+    241_scale
+    241_zero_point
+  Outputs:
+    241_DequantizeLinear
+
+Node 480: DequantizeLinear (Name: 260_DequantizeLinear)
+  Inputs:
+    260_QuantizeLinear
+    260_scale
+    260_zero_point
+  Outputs:
+    260
+
+Node 481: Conv (Name: Conv_117)
+  Inputs:
+    241_DequantizeLinear
+    model.68.conv.weight_DequantizeLinear
+    model.68.conv.bias
+  Outputs:
+    242
+
+Node 482: Conv (Name: Conv_119)
+  Inputs:
+    241_DequantizeLinear
+    model.69.conv.weight_DequantizeLinear
+    model.69.conv.bias
+  Outputs:
+    244
+
+Node 483: QuantizeLinear (Name: 242_QuantizeLinear)
+  Inputs:
+    242
+    242_scale
+    242_zero_point
+  Outputs:
+    242_QuantizeLinear
+
+Node 484: QuantizeLinear (Name: 244_QuantizeLinear)
+  Inputs:
+    244
+    244_scale
+    244_zero_point
+  Outputs:
+    244_QuantizeLinear
+
+Node 485: DequantizeLinear (Name: 242_DequantizeLinear)
+  Inputs:
+    242_QuantizeLinear
+    242_scale
+    242_zero_point
+  Outputs:
+    242_DequantizeLinear
+
+Node 486: DequantizeLinear (Name: 244_DequantizeLinear)
+  Inputs:
+    244_QuantizeLinear
+    244_scale
+    244_zero_point
+  Outputs:
+    244_DequantizeLinear
+
+Node 487: LeakyRelu (Name: LeakyRelu_118)
+  Inputs:
+    242_DequantizeLinear
+  Outputs:
+    243
+
+Node 488: LeakyRelu (Name: LeakyRelu_120)
+  Inputs:
+    244_DequantizeLinear
+  Outputs:
+    245
+
+Node 489: QuantizeLinear (Name: 243_QuantizeLinear)
+  Inputs:
+    243
+    243_scale
+    243_zero_point
+  Outputs:
+    243_QuantizeLinear
+
+Node 490: QuantizeLinear (Name: 245_QuantizeLinear)
+  Inputs:
+    245
+    245_scale
+    245_zero_point
+  Outputs:
+    245_QuantizeLinear
+
+Node 491: DequantizeLinear (Name: 243_DequantizeLinear)
+  Inputs:
+    243_QuantizeLinear
+    243_scale
+    243_zero_point
+  Outputs:
+    243_DequantizeLinear
+
+Node 492: DequantizeLinear (Name: 245_DequantizeLinear)
+  Inputs:
+    245_QuantizeLinear
+    245_scale
+    245_zero_point
+  Outputs:
+    245_DequantizeLinear
+
+Node 493: Conv (Name: Conv_121)
+  Inputs:
+    245_DequantizeLinear
+    model.70.conv.weight_DequantizeLinear
+    model.70.conv.bias
+  Outputs:
+    246
+
+Node 494: QuantizeLinear (Name: 246_QuantizeLinear)
+  Inputs:
+    246
+    246_scale
+    246_zero_point
+  Outputs:
+    246_QuantizeLinear
+
+Node 495: DequantizeLinear (Name: 246_DequantizeLinear)
+  Inputs:
+    246_QuantizeLinear
+    246_scale
+    246_zero_point
+  Outputs:
+    246_DequantizeLinear
+
+Node 496: LeakyRelu (Name: LeakyRelu_122)
+  Inputs:
+    246_DequantizeLinear
+  Outputs:
+    247
+
+Node 497: QuantizeLinear (Name: 247_QuantizeLinear)
+  Inputs:
+    247
+    247_scale
+    247_zero_point
+  Outputs:
+    247_QuantizeLinear
+
+Node 498: DequantizeLinear (Name: 247_DequantizeLinear)
+  Inputs:
+    247_QuantizeLinear
+    247_scale
+    247_zero_point
+  Outputs:
+    247_DequantizeLinear
+
+Node 499: Conv (Name: Conv_123)
+  Inputs:
+    247_DequantizeLinear
+    model.71.conv.weight_DequantizeLinear
+    model.71.conv.bias
+  Outputs:
+    248
+
+Node 500: QuantizeLinear (Name: 248_QuantizeLinear)
+  Inputs:
+    248
+    248_scale
+    248_zero_point
+  Outputs:
+    248_QuantizeLinear
+
+Node 501: DequantizeLinear (Name: 248_DequantizeLinear)
+  Inputs:
+    248_QuantizeLinear
+    248_scale
+    248_zero_point
+  Outputs:
+    248_DequantizeLinear
+
+Node 502: LeakyRelu (Name: LeakyRelu_124)
+  Inputs:
+    248_DequantizeLinear
+  Outputs:
+    249
+
+Node 503: QuantizeLinear (Name: 249_QuantizeLinear)
+  Inputs:
+    249
+    249_scale
+    249_zero_point
+  Outputs:
+    249_QuantizeLinear
+
+Node 504: DequantizeLinear (Name: 249_DequantizeLinear)
+  Inputs:
+    249_QuantizeLinear
+    249_scale
+    249_zero_point
+  Outputs:
+    249_DequantizeLinear
+
+Node 505: Concat (Name: Concat_125)
+  Inputs:
+    249_DequantizeLinear
+    247_DequantizeLinear
+    245_DequantizeLinear
+    243_DequantizeLinear
+  Outputs:
+    250
+
+Node 506: QuantizeLinear (Name: 250_QuantizeLinear)
+  Inputs:
+    250
+    250_scale
+    250_zero_point
+  Outputs:
+    250_QuantizeLinear
+
+Node 507: DequantizeLinear (Name: 250_DequantizeLinear)
+  Inputs:
+    250_QuantizeLinear
+    250_scale
+    250_zero_point
+  Outputs:
+    250_DequantizeLinear
+
+Node 508: Conv (Name: Conv_126)
+  Inputs:
+    250_DequantizeLinear
+    model.73.conv.weight_DequantizeLinear
+    model.73.conv.bias
+  Outputs:
+    251
+
+Node 509: QuantizeLinear (Name: 251_QuantizeLinear)
+  Inputs:
+    251
+    251_scale
+    251_zero_point
+  Outputs:
+    251_QuantizeLinear
+
+Node 510: DequantizeLinear (Name: 251_DequantizeLinear)
+  Inputs:
+    251_QuantizeLinear
+    251_scale
+    251_zero_point
+  Outputs:
+    251_DequantizeLinear
+
+Node 511: LeakyRelu (Name: LeakyRelu_127)
+  Inputs:
+    251_DequantizeLinear
+  Outputs:
+    252
+
+Node 512: QuantizeLinear (Name: 252_QuantizeLinear)
+  Inputs:
+    252
+    252_scale
+    252_zero_point
+  Outputs:
+    252_QuantizeLinear
+
+Node 513: DequantizeLinear (Name: 252_DequantizeLinear)
+  Inputs:
+    252_QuantizeLinear
+    252_scale
+    252_zero_point
+  Outputs:
+    252_DequantizeLinear
+
+Node 514: Conv (Name: Conv_132)
+  Inputs:
+    252_DequantizeLinear
+    model.76.conv.weight_DequantizeLinear
+    model.76.conv.bias
+  Outputs:
+    257
+
+Node 515: QuantizeLinear (Name: 257_QuantizeLinear)
+  Inputs:
+    257
+    257_scale
+    257_zero_point
+  Outputs:
+    257_QuantizeLinear
+
+Node 516: DequantizeLinear (Name: 257_DequantizeLinear)
+  Inputs:
+    257_QuantizeLinear
+    257_scale
+    257_zero_point
+  Outputs:
+    257_DequantizeLinear
+
+Node 517: LeakyRelu (Name: LeakyRelu_133)
+  Inputs:
+    257_DequantizeLinear
+  Outputs:
+    258
+
+Node 518: QuantizeLinear (Name: 258_QuantizeLinear)
+  Inputs:
+    258
+    258_scale
+    258_zero_point
+  Outputs:
+    258_QuantizeLinear
+
+Node 519: DequantizeLinear (Name: 258_DequantizeLinear)
+  Inputs:
+    258_QuantizeLinear
+    258_scale
+    258_zero_point
+  Outputs:
+    258_DequantizeLinear
+
+Node 520: Conv (Name: Conv_136)
+  Inputs:
+    258_DequantizeLinear
+    model.77.m.2.weight_DequantizeLinear
+    model.77.m.2.bias
+  Outputs:
+    261_QuantizeLinearInput
+
+Node 521: QuantizeLinear (Name: 261_QuantizeLinear)
+  Inputs:
+    261_QuantizeLinearInput
+    261_scale
+    261_zero_point
+  Outputs:
+    261_QuantizeLinear
+
+Node 522: DequantizeLinear (Name: 261_DequantizeLinear)
+  Inputs:
+    261_QuantizeLinear
+    261_scale
+    261_zero_point
+  Outputs:
+    261
+
+
+Model Metadata Properties:
+onnx.infer: onnxruntime.quant
+
+Initializer Tensors:
+262 (Type: 1, Shape: [4])
+263 (Type: 1, Shape: [4])
+188 (Type: 1, Shape: [0])
+209 (Type: 1, Shape: [0])
+images_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+119_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.0.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 1, 3, 3])
+120_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+121_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.1.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 16, 3, 3])
+122_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+123_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.2.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 32, 1, 1])
+124_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+125_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.3.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 32, 1, 1])
+126_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+127_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.4.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 16, 3, 3])
+128_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+129_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.5.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 16, 3, 3])
+130_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+131_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+132_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.7.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 64, 1, 1])
+133_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+134_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+135_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.9.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 1, 1])
+136_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+137_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.10.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 1, 1])
+138_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+139_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.11.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 3, 3])
+140_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+141_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.12.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 3, 3])
+142_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+143_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+144_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.14.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 128, 1, 1])
+145_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+146_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+147_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.16.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 56, 1, 1])
+148_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+149_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.17.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 56, 1, 1])
+150_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+151_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.18.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 56, 3, 3])
+152_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+153_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.19.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 56, 3, 3])
+154_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+155_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+156_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.21.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 224, 1, 1])
+157_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+158_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+159_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.23.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 104, 1, 1])
+160_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+161_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.24.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 104, 1, 1])
+162_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+163_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.25.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 104, 3, 3])
+164_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+165_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.26.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 104, 3, 3])
+166_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+167_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+168_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.28.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [208, 416, 1, 1])
+169_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+170_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.29.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 208, 1, 1])
+171_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+172_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.30.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 208, 1, 1])
+173_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+174_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+175_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+176_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+177_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+178_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.35.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 416, 1, 1])
+179_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+180_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+181_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.37.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 208, 1, 1])
+182_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+183_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.38.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 104, 1, 1])
+184_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+189_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+190_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.40.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 104, 1, 1])
+191_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+192_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+193_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.42.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 112, 1, 1])
+194_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+195_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.43.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 112, 1, 1])
+196_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+197_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.44.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 3, 3])
+198_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+199_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.45.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 3, 3])
+200_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+201_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+202_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.47.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 128, 1, 1])
+203_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+204_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.48.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 56, 1, 1])
+205_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+210_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+211_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.50.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 56, 1, 1])
+212_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+213_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+214_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.52.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 64, 1, 1])
+215_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+216_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.53.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 64, 1, 1])
+217_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+218_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.54.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 16, 3, 3])
+219_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+220_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.55.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [16, 16, 3, 3])
+221_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+222_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+223_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.57.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 64, 1, 1])
+224_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+225_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.58.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 32, 3, 3])
+226_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+227_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+228_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.60.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 112, 1, 1])
+229_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+230_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.61.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 112, 1, 1])
+231_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+232_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.62.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 3, 3])
+233_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+234_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.63.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [32, 32, 3, 3])
+235_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+236_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+237_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.65.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 128, 1, 1])
+238_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+239_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.66.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 56, 3, 3])
+240_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+241_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+242_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.68.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 208, 1, 1])
+243_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+244_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.69.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 208, 1, 1])
+245_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+246_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.70.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 56, 3, 3])
+247_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+248_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.71.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 56, 3, 3])
+249_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+250_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+251_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.73.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 224, 1, 1])
+252_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+253_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.74.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [56, 32, 3, 3])
+254_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+255_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.75.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [104, 56, 3, 3])
+256_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+257_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.76.conv.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [208, 104, 3, 3])
+258_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+output_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.77.m.0.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [27, 56, 1, 1])
+260_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.77.m.1.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [27, 104, 1, 1])
+261_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [1])
+ (Type: 5, Shape: [1])
+model.77.m.2.weight_zero_point (Type: 3, Shape: [])
+ (Type: 5, Shape: [27, 208, 1, 1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.0.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.1.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.2.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.3.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.4.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.5.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.7.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.9.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.10.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.11.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.12.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.14.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.16.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.17.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.18.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.19.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.21.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.23.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.24.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.25.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.26.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [208])
+ (Type: 5, Shape: [0])
+model.28.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.29.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.30.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.35.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.37.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.38.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.40.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.42.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.43.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.44.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.45.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.47.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.48.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.50.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.52.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.53.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.54.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [16])
+ (Type: 5, Shape: [0])
+model.55.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.57.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.58.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.60.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.61.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.62.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [32])
+ (Type: 5, Shape: [0])
+model.63.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.65.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.66.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.68.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.69.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.70.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.71.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.73.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [56])
+ (Type: 5, Shape: [0])
+model.74.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [104])
+ (Type: 5, Shape: [0])
+model.75.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [208])
+ (Type: 5, Shape: [0])
+model.76.conv.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [27])
+ (Type: 5, Shape: [0])
+model.77.m.0.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [27])
+ (Type: 5, Shape: [0])
+model.77.m.1.bias_quantized_zero_point (Type: 6, Shape: [1])
+ (Type: 5, Shape: [27])
+ (Type: 5, Shape: [0])
+model.77.m.2.bias_quantized_zero_point (Type: 6, Shape: [1])
